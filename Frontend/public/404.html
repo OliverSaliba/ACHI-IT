@@ -9,20 +9,19 @@
         var pathname = window.location.pathname;
         var search = window.location.search;
         var hash = window.location.hash;
-        var l = window.location;
+        var base = "/ACHI-IT";
+        var baseSlash = base + "/";
 
-        var newUrl = l.protocol + "//" + l.host + "/?p=" + encodeURIComponent(l.pathname + l.search + l.hash)
-        window.location.replace(newUrl)
+        if ((pathname === base || pathname === baseSlash) && search.indexOf("p=") !== -1) return;
 
-        // Prevent redirect loop if already on ?p=
-        if (search.indexOf("?p=") === 0) return;
-
-        var redirect = pathname + search + hash;
-
-        // Safety check
+        var pathWithoutBase = pathname.indexOf(base) === 0
+          ? (pathname.slice(base.length) || "/")
+          : pathname;
+        var redirect = pathWithoutBase + search + hash;
         if (!redirect || redirect === "/") return;
 
-        window.location.replace("/?p=" + encodeURIComponent(redirect));
+        var newUrl = window.location.protocol + "//" + window.location.host + base + "/?p=" + encodeURIComponent(redirect);
+        window.location.replace(newUrl);
       })();
     </script>
   </head>

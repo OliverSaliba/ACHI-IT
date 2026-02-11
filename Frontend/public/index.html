@@ -10,9 +10,11 @@
         try {
           var decoded = decodeURIComponent(p)
           if (decoded && decoded.charAt(0) === "/") {
+            var base = "%PUBLIC_URL%" || ""
+            var pathPart = base + (decoded === "/" ? "" : decoded)
             params.delete("p")
             var rest = params.toString()
-            var newUrl = decoded + (rest ? (decoded.includes("?") ? "&" : "?") + rest : "")
+            var newUrl = pathPart + (rest ? (pathPart.indexOf("?") !== -1 ? "&" : "?") + rest : "")
             window.history.replaceState(null, "", newUrl)
           }
         } catch (e) {
