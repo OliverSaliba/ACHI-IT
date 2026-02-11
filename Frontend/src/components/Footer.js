@@ -4,12 +4,12 @@ import { Link, useLocation, useNavigate } from "react-router-dom"
 import { useTranslation } from "react-i18next"
 import ImageWebp from "./ImageWebp"
 import { getLangFromPath } from "../utils/langRouting"
+import { publicAsset } from "../utils/publicAsset"
 
 const Footer = () => {
   const { t } = useTranslation()
   const navigate = useNavigate()
   const location = useLocation()
-  const ASSET = process.env.PUBLIC_URL || ""
 
   const currentLang = getLangFromPath(location.pathname)
   const currentYear = new Date().getFullYear()
@@ -48,14 +48,14 @@ const Footer = () => {
             <Link to={langPath("/")} className="focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-[#28509E] rounded-sm">
               {currentLang === "it" ? (
                 <img
-                  src={`${ASSET}/assets/WhatsApp Image 2026-02-04 at 2.23.50 PM.jpeg`}
+                  src={publicAsset("/assets/WhatsApp Image 2026-02-04 at 2.23.50 PM.jpeg")}
                   alt={t("footer.logoAlt")}
                   className="max-w-[140px] h-auto block"
                 />
               ) : (
                 <ImageWebp
-                  srcWebp={`${ASSET}/assets/ArchiScaffoldinglogo_lossyalpha.webp`}
-                  src={`${ASSET}/assets/ArchiScaffoldinglogo_lossyalpha.webp`}
+                  srcWebp={publicAsset("/assets/ArchiScaffoldinglogo_lossyalpha.webp")}
+                  src={publicAsset("/assets/ArchiScaffoldinglogo_lossyalpha.webp")}
                   alt={t("footer.logoAlt")}
                   className="max-w-[140px] h-auto block"
                 />
@@ -196,7 +196,7 @@ const Footer = () => {
                 aria-label={t("footer.social.facebook.aria")}
               >
                 <img
-                  src={`${ASSET}/${t("footer.social.facebook.icon")}`}
+                  src={publicAsset(`/${t("footer.social.facebook.icon")}`)}
                   alt={t("footer.social.facebook.alt")}
                   className="w-[20px] h-[20px]"
                   width="20"
@@ -212,7 +212,7 @@ const Footer = () => {
                 aria-label={t("footer.social.instagram.aria")}
               >
                 <img
-                  src={`${ASSET}/${t("footer.social.instagram.icon")}`}
+                  src={publicAsset(`/${t("footer.social.instagram.icon")}`)}
                   alt={t("footer.social.instagram.alt")}
                   className="w-[20px] h-[20px]"
                   width="20"
@@ -228,7 +228,7 @@ const Footer = () => {
                 aria-label={t("footer.social.x.aria")}
               >
                 <img
-                  src={`${ASSET}/${t("footer.social.x.icon")}`}
+                  src={publicAsset(`/${t("footer.social.x.icon")}`)}
                   alt={t("footer.social.x.alt")}
                   className="w-[20px] h-[20px]"
                   width="20"
@@ -244,7 +244,7 @@ const Footer = () => {
                 aria-label={t("footer.social.linkedin.aria")}
               >
                 <img
-                  src={`${ASSET}/${t("footer.social.linkedin.icon")}`}
+                  src={publicAsset(`/${t("footer.social.linkedin.icon")}`)}
                   alt={t("footer.social.linkedin.alt")}
                   className="w-[20px] h-[20px]"
                   width="20"
@@ -260,7 +260,7 @@ const Footer = () => {
                 aria-label={t("footer.social.tiktok.aria")}
                 >
                 <img
-                  src={`${ASSET}/${t("footer.social.tiktok.icon")}`}
+                  src={publicAsset(`/${t("footer.social.tiktok.icon")}`)}
                   alt={t("footer.social.tiktok.alt")}
                   className="w-[20px] h-[20px]"
                   width="20"

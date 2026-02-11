@@ -3,9 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import ImageWebp from "./ImageWebp";
-
-const ASSET_BASE = process.env.PUBLIC_URL || "";
-const WA_ICON = `${ASSET_BASE}/assets/Whatsapp.svg`;
+import { publicAsset } from "../utils/publicAsset";
 
 function GridItems({ index, t }) {
   return (
@@ -22,11 +20,11 @@ function GridItems({ index, t }) {
       >
         <div className="relative group hover:bg-gray-900 overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp={`${ASSET_BASE}/assets/361641065_768035905323121_6701313797518833287_n2_lossyalpha.webp`}
+            srcWebp={publicAsset("/assets/361641065_768035905323121_6701313797518833287_n2_lossyalpha.webp")}
             id="switchImageAnim"
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src={`${ASSET_BASE}/assets/361641065_768035905323121_6701313797518833287_n2_lossyalpha.webp`}
+            src={publicAsset("/assets/361641065_768035905323121_6701313797518833287_n2_lossyalpha.webp")}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -46,7 +44,7 @@ function GridItems({ index, t }) {
                       className="flex rtl:flex-row-reverse justify-center items-center text-[12px] 2xl:text-[15px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[15px] text-white font-saira font-[600] leading-[29px] py-[10px] px-[30px] bg-[#28509E] rounded-[12px] uppercase hover:bg-[#25D366] border-[#FFF] hover:border-[#25D366] border-solid border-2 transition duration-500"
                       aria-label="Contact ACHI Scaffolding on WhatsApp"
                     >
-                      <img src={WA_ICON} className="w-[24px] mr-[10px]" alt="WhatsApp" />
+                      <img src={publicAsset("/assets/Whatsapp.svg")} className="w-[24px] mr-[10px]" alt="WhatsApp" />
                       {t("service.contactBtn")}
                     </a>
                   </div>
@@ -66,10 +64,10 @@ function GridItems({ index, t }) {
       >
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp={`${ASSET_BASE}/assets/Suspendedscaffolding12_lossyalpha.webp`}
+            srcWebp={publicAsset("/assets/Suspendedscaffolding12_lossyalpha.webp")}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src={`${ASSET_BASE}/assets/Suspendedscaffolding12_lossyalpha.webp`}
+            src={publicAsset("/assets/Suspendedscaffolding12_lossyalpha.webp")}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -89,7 +87,7 @@ function GridItems({ index, t }) {
                       className="flex rtl:flex-row-reverse justify-center items-center text-[12px] 2xl:text-[15px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[15px] text-white font-saira font-[600] leading-[29px] py-[10px] px-[30px] bg-[#28509E] rounded-[12px] uppercase hover:bg-[#25D366] border-[#FFF] hover:border-[#25D366] border-solid border-2 transition duration-500"
                       aria-label="Contact ACHI Scaffolding on WhatsApp"
                     >
-                      <img src={WA_ICON} className="w-[24px] mr-[10px]" alt="WhatsApp" />
+                      <img src={publicAsset("/assets/Whatsapp.svg")} className="w-[24px] mr-[10px]" alt="WhatsApp" />
                       {t("service.contactBtn")}
                     </a>
                   </div>
@@ -106,10 +104,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="ponteggiSospesi">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp={`${ASSET_BASE}/assets/SDC14429_lossyalpha.webp`}
+            srcWebp={publicAsset("/assets/SDC14429_lossyalpha.webp")}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src={`${ASSET_BASE}/assets/SDC14429_lossyalpha.webp`}
+            src={publicAsset("/assets/SDC14429_lossyalpha.webp")}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -124,7 +122,7 @@ function GridItems({ index, t }) {
                       className="flex rtl:flex-row-reverse justify-center items-center text-[12px] 2xl:text-[15px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[15px] text-white font-saira font-[600] leading-[29px] py-[10px] px-[30px] bg-[#28509E] rounded-[12px] uppercase hover:bg-[#25D366] border-[#FFF] hover:border-[#25D366] border-solid border-2 transition duration-500"
                       aria-label="Contact ACHI Scaffolding on WhatsApp"
                     >
-                      <img src={WA_ICON} className="w-[24px] mr-[10px]" alt="WhatsApp" />
+                      <img src={publicAsset("/assets/Whatsapp.svg")} className="w-[24px] mr-[10px]" alt="WhatsApp" />
                       {t("service.contactBtn")}
                     </a>
                   </div>
@@ -141,10 +139,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="pontegggiInternee">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp={`${ASSET_BASE}/assets/HomeBanner42_lossyalpha.webp`}
+            srcWebp={publicAsset("/assets/HomeBanner42_lossyalpha.webp")}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src={`${ASSET_BASE}/assets/HomeBanner42_lossyalpha.webp`}
+            src={publicAsset("/assets/HomeBanner42_lossyalpha.webp")}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -159,7 +157,7 @@ function GridItems({ index, t }) {
                       className="flex rtl:flex-row-reverse justify-center items-center text-[12px] 2xl:text-[15px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[15px] text-white font-saira font-[600] leading-[29px] py-[10px] px-[30px] bg-[#28509E] rounded-[12px] uppercase hover:bg-[#25D366] border-[#FFF] hover:border-[#25D366] border-solid border-2 transition duration-500"
                       aria-label="Contact ACHI Scaffolding on WhatsApp"
                     >
-                      <img src={WA_ICON} className="w-[24px] mr-[10px]" alt="WhatsApp" />
+                      <img src={publicAsset("/assets/Whatsapp.svg")} className="w-[24px] mr-[10px]" alt="WhatsApp" />
                       {t("service.contactBtn")}
                     </a>
                   </div>
@@ -176,10 +174,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="StruturraPortata">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp={`${ASSET_BASE}/assets/HomeBanner12_lossyalpha.webp`}
+            srcWebp={publicAsset("/assets/HomeBanner12_lossyalpha.webp")}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src={`${ASSET_BASE}/assets/HomeBanner12_lossyalpha.webp`}
+            src={publicAsset("/assets/HomeBanner12_lossyalpha.webp")}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -194,7 +192,7 @@ function GridItems({ index, t }) {
                       className="flex rtl:flex-row-reverse justify-center items-center text-[12px] 2xl:text-[15px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[15px] text-white font-saira font-[600] leading-[29px] py-[10px] px-[30px] bg-[#28509E] rounded-[12px] uppercase hover:bg-[#25D366] border-[#FFF] hover:border-[#25D366] border-solid border-2 transition duration-500"
                       aria-label="Contact ACHI Scaffolding on WhatsApp"
                     >
-                      <img src={WA_ICON} className="w-[24px] mr-[10px]" alt="WhatsApp" />
+                      <img src={publicAsset("/assets/Whatsapp.svg")} className="w-[24px] mr-[10px]" alt="WhatsApp" />
                       {t("service.contactBtn")}
                     </a>
                   </div>
@@ -211,10 +209,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="puntellamenti">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp={`${ASSET_BASE}/assets/20819369_135108873765021_8187137705964148355_o(1)2_lossyalpha.webp`}
+            srcWebp={publicAsset("/assets/20819369_135108873765021_8187137705964148355_o(1)2_lossyalpha.webp")}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src={`${ASSET_BASE}/assets/20819369_135108873765021_8187137705964148355_o(1)2_lossyalpha.webp`}
+            src={publicAsset("/assets/20819369_135108873765021_8187137705964148355_o(1)2_lossyalpha.webp")}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -229,7 +227,7 @@ function GridItems({ index, t }) {
                       className="flex rtl:flex-row-reverse justify-center items-center text-[12px] 2xl:text-[15px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[15px] text-white font-saira font-[600] leading-[29px] py-[10px] px-[30px] bg-[#28509E] rounded-[12px] uppercase hover:bg-[#25D366] border-[#FFF] hover:border-[#25D366] border-solid border-2 transition duration-500"
                       aria-label="Contact ACHI Scaffolding on WhatsApp"
                     >
-                      <img src={WA_ICON} className="w-[24px] mr-[10px]" alt="WhatsApp" />
+                      <img src={publicAsset("/assets/Whatsapp.svg")} className="w-[24px] mr-[10px]" alt="WhatsApp" />
                       {t("service.contactBtn")}
                     </a>
                   </div>
@@ -246,10 +244,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="scaffoldingDesign">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp={`${ASSET_BASE}/assets/Scaffoldingdesign2_lossyalpha.webp`}
+            srcWebp={publicAsset("/assets/Scaffoldingdesign2_lossyalpha.webp")}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src={`${ASSET_BASE}/assets/Scaffoldingdesign2_lossyalpha.webp`}
+            src={publicAsset("/assets/Scaffoldingdesign2_lossyalpha.webp")}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -264,7 +262,7 @@ function GridItems({ index, t }) {
                       className="flex rtl:flex-row-reverse justify-center items-center text-[12px] 2xl:text-[15px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[15px] text-white font-saira font-[600] leading-[29px] py-[10px] px-[30px] bg-[#28509E] rounded-[12px] uppercase hover:bg-[#25D366] border-[#FFF] hover:border-[#25D366] border-solid border-2 transition duration-500"
                       aria-label="Contact ACHI Scaffolding on WhatsApp"
                     >
-                      <img src={WA_ICON} className="w-[24px] mr-[10px]" alt="WhatsApp" />
+                      <img src={publicAsset("/assets/Whatsapp.svg")} className="w-[24px] mr-[10px]" alt="WhatsApp" />
                       {t("service.contactBtn")}
                     </a>
                   </div>
@@ -281,10 +279,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="specializedLaborforce">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp={`${ASSET_BASE}/assets/361641065_768035905323121_6701313797518833287_n2_lossyalpha.webp`}
+            srcWebp={publicAsset("/assets/361641065_768035905323121_6701313797518833287_n2_lossyalpha.webp")}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src={`${ASSET_BASE}/assets/361641065_768035905323121_6701313797518833287_n2_lossyalpha.webp`}
+            src={publicAsset("/assets/361641065_768035905323121_6701313797518833287_n2_lossyalpha.webp")}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -299,7 +297,7 @@ function GridItems({ index, t }) {
                       className="flex rtl:flex-row-reverse justify-center items-center text-[12px] 2xl:text-[15px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[15px] text-white font-saira font-[600] leading-[29px] py-[10px] px-[30px] bg-[#28509E] rounded-[12px] uppercase hover:bg-[#25D366] border-[#FFF] hover:border-[#25D366] border-solid border-2 transition duration-500"
                       aria-label="Contact ACHI Scaffolding on WhatsApp"
                     >
-                      <img src={WA_ICON} className="w-[24px] mr-[10px]" alt="WhatsApp" />
+                      <img src={publicAsset("/assets/Whatsapp.svg")} className="w-[24px] mr-[10px]" alt="WhatsApp" />
                       {t("service.contactBtn")}
                     </a>
                   </div>
@@ -316,10 +314,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="highRiseScaffolding">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp={`${ASSET_BASE}/assets/SDC14429_lossyalpha.webp`}
+            srcWebp={publicAsset("/assets/SDC14429_lossyalpha.webp")}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src={`${ASSET_BASE}/assets/SDC14429_lossyalpha.webp`}
+            src={publicAsset("/assets/SDC14429_lossyalpha.webp")}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -334,7 +332,7 @@ function GridItems({ index, t }) {
                       className="flex rtl:flex-row-reverse justify-center items-center text-[12px] 2xl:text-[15px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[15px] text-white font-saira font-[600] leading-[29px] py-[10px] px-[30px] bg-[#28509E] rounded-[12px] uppercase hover:bg-[#25D366] border-[#FFF] hover:border-[#25D366] border-solid border-2 transition duration-500"
                       aria-label="Contact ACHI Scaffolding on WhatsApp"
                     >
-                      <img src={WA_ICON} className="w-[24px] mr-[10px]" alt="WhatsApp" />
+                      <img src={publicAsset("/assets/Whatsapp.svg")} className="w-[24px] mr-[10px]" alt="WhatsApp" />
                       {t("service.contactBtn")}
                     </a>
                   </div>
@@ -351,10 +349,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="circularDomeScaffolding">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp={`${ASSET_BASE}/assets/SDC14429_lossyalpha.webp`}
+            srcWebp={publicAsset("/assets/SDC14429_lossyalpha.webp")}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src={`${ASSET_BASE}/assets/SDC14429_lossyalpha.webp`}
+            src={publicAsset("/assets/SDC14429_lossyalpha.webp")}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -369,7 +367,7 @@ function GridItems({ index, t }) {
                       className="flex rtl:flex-row-reverse justify-center items-center text-[12px] 2xl:text-[15px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[15px] text-white font-saira font-[600] leading-[29px] py-[10px] px-[30px] bg-[#28509E] rounded-[12px] uppercase hover:bg-[#25D366] border-[#FFF] hover:border-[#25D366] border-solid border-2 transition duration-500"
                       aria-label="Contact ACHI Scaffolding on WhatsApp"
                     >
-                      <img src={WA_ICON} className="w-[24px] mr-[10px]" alt="WhatsApp" />
+                      <img src={publicAsset("/assets/Whatsapp.svg")} className="w-[24px] mr-[10px]" alt="WhatsApp" />
                       {t("service.contactBtn")}
                     </a>
                   </div>
@@ -386,10 +384,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="scaffoldingForEvents">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp={`${ASSET_BASE}/assets/HomeBanner42_lossyalpha.webp`}
+            srcWebp={publicAsset("/assets/HomeBanner42_lossyalpha.webp")}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src={`${ASSET_BASE}/assets/HomeBanner42_lossyalpha.webp`}
+            src={publicAsset("/assets/HomeBanner42_lossyalpha.webp")}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -404,7 +402,7 @@ function GridItems({ index, t }) {
                       className="flex rtl:flex-row-reverse justify-center items-center text-[12px] 2xl:text-[15px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[15px] text-white font-saira font-[600] leading-[29px] py-[10px] px-[30px] bg-[#28509E] rounded-[12px] uppercase hover:bg-[#25D366] border-[#FFF] hover:border-[#25D366] border-solid border-2 transition duration-500"
                       aria-label="Contact ACHI Scaffolding on WhatsApp"
                     >
-                      <img src={WA_ICON} className="w-[24px] mr-[10px]" alt="WhatsApp" />
+                      <img src={publicAsset("/assets/Whatsapp.svg")} className="w-[24px] mr-[10px]" alt="WhatsApp" />
                       {t("service.contactBtn")}
                     </a>
                   </div>
@@ -421,10 +419,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="industrialScaffolding">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp={`${ASSET_BASE}/assets/HomeBanner42_lossyalpha.webp`}
+            srcWebp={publicAsset("/assets/HomeBanner42_lossyalpha.webp")}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src={`${ASSET_BASE}/assets/HomeBanner42_lossyalpha.webp`}
+            src={publicAsset("/assets/HomeBanner42_lossyalpha.webp")}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -439,7 +437,7 @@ function GridItems({ index, t }) {
                       className="flex rtl:flex-row-reverse justify-center items-center text-[12px] 2xl:text-[15px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[15px] text-white font-saira font-[600] leading-[29px] py-[10px] px-[30px] bg-[#28509E] rounded-[12px] uppercase hover:bg-[#25D366] border-[#FFF] hover:border-[#25D366] border-solid border-2 transition duration-500"
                       aria-label="Contact ACHI Scaffolding on WhatsApp"
                     >
-                      <img src={WA_ICON} className="w-[24px] mr-[10px]" alt="WhatsApp" />
+                      <img src={publicAsset("/assets/Whatsapp.svg")} className="w-[24px] mr-[10px]" alt="WhatsApp" />
                       {t("service.contactBtn")}
                     </a>
                   </div>
@@ -456,10 +454,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="roofScaffolding">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp={`${ASSET_BASE}/assets/HomeBanner42_lossyalpha.webp`}
+            srcWebp={publicAsset("/assets/HomeBanner42_lossyalpha.webp")}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src={`${ASSET_BASE}/assets/HomeBanner42_lossyalpha.webp`}
+            src={publicAsset("/assets/HomeBanner42_lossyalpha.webp")}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -474,7 +472,7 @@ function GridItems({ index, t }) {
                       className="flex rtl:flex-row-reverse justify-center items-center text-[12px] 2xl:text-[15px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[15px] text-white font-saira font-[600] leading-[29px] py-[10px] px-[30px] bg-[#28509E] rounded-[12px] uppercase hover:bg-[#25D366] border-[#FFF] hover:border-[#25D366] border-solid border-2 transition duration-500"
                       aria-label="Contact ACHI Scaffolding on WhatsApp"
                     >
-                      <img src={WA_ICON} className="w-[24px] mr-[10px]" alt="WhatsApp" />
+                      <img src={publicAsset("/assets/Whatsapp.svg")} className="w-[24px] mr-[10px]" alt="WhatsApp" />
                       {t("service.contactBtn")}
                     </a>
                   </div>
@@ -491,10 +489,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="mobileSuspendedScaffolding">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp={`${ASSET_BASE}/assets/Suspendedscaffolding12_lossyalpha.webp`}
+            srcWebp={publicAsset("/assets/Suspendedscaffolding12_lossyalpha.webp")}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src={`${ASSET_BASE}/assets/Suspendedscaffolding12_lossyalpha.webp`}
+            src={publicAsset("/assets/Suspendedscaffolding12_lossyalpha.webp")}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -509,7 +507,7 @@ function GridItems({ index, t }) {
                       className="flex rtl:flex-row-reverse justify-center items-center text-[12px] 2xl:text-[15px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[15px] text-white font-saira font-[600] leading-[29px] py-[10px] px-[30px] bg-[#28509E] rounded-[12px] uppercase hover:bg-[#25D366] border-[#FFF] hover:border-[#25D366] border-solid border-2 transition duration-500"
                       aria-label="Contact ACHI Scaffolding on WhatsApp"
                     >
-                      <img src={WA_ICON} className="w-[24px] mr-[10px]" alt="WhatsApp" />
+                      <img src={publicAsset("/assets/Whatsapp.svg")} className="w-[24px] mr-[10px]" alt="WhatsApp" />
                       {t("service.contactBtn")}
                     </a>
                   </div>
@@ -526,10 +524,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="scaffoldingAccessStairs">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp={`${ASSET_BASE}/assets/SDC14429_lossyalpha.webp`}
+            srcWebp={publicAsset("/assets/SDC14429_lossyalpha.webp")}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src={`${ASSET_BASE}/assets/SDC14429_lossyalpha.webp`}
+            src={publicAsset("/assets/SDC14429_lossyalpha.webp")}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -544,7 +542,7 @@ function GridItems({ index, t }) {
                       className="flex rtl:flex-row-reverse justify-center items-center text-[12px] 2xl:text-[15px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[15px] text-white font-saira font-[600] leading-[29px] py-[10px] px-[30px] bg-[#28509E] rounded-[12px] uppercase hover:bg-[#25D366] border-[#FFF] hover:border-[#25D366] border-solid border-2 transition duration-500"
                       aria-label="Contact ACHI Scaffolding on WhatsApp"
                     >
-                      <img src={WA_ICON} className="w-[24px] mr-[10px]" alt="WhatsApp" />
+                      <img src={publicAsset("/assets/Whatsapp.svg")} className="w-[24px] mr-[10px]" alt="WhatsApp" />
                       {t("service.contactBtn")}
                     </a>
                   </div>
@@ -561,10 +559,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="unloadingLoadingPlatforms">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp={`${ASSET_BASE}/assets/SDC14429_lossyalpha.webp`}
+            srcWebp={publicAsset("/assets/SDC14429_lossyalpha.webp")}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src={`${ASSET_BASE}/assets/SDC14429_lossyalpha.webp`}
+            src={publicAsset("/assets/SDC14429_lossyalpha.webp")}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -579,7 +577,7 @@ function GridItems({ index, t }) {
                       className="flex rtl:flex-row-reverse justify-center items-center text-[12px] 2xl:text-[15px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[15px] text-white font-saira font-[600] leading-[29px] py-[10px] px-[30px] bg-[#28509E] rounded-[12px] uppercase hover:bg-[#25D366] border-[#FFF] hover:border-[#25D366] border-solid border-2 transition duration-500"
                       aria-label="Contact ACHI Scaffolding on WhatsApp"
                     >
-                      <img src={WA_ICON} className="w-[24px] mr-[10px]" alt="WhatsApp" />
+                      <img src={publicAsset("/assets/Whatsapp.svg")} className="w-[24px] mr-[10px]" alt="WhatsApp" />
                       {t("service.contactBtn")}
                     </a>
                   </div>

@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { publicAsset } from '../utils/publicAsset';
 
 const transparentImage = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
 
@@ -47,42 +48,40 @@ const activateWebpCompatibility = () => {
   if (!getWebpCompatibilityInfo()) webpCompatibilityTest();
 };
 
-const ASSET_BASE = process.env.PUBLIC_URL || '';
-
 const ICON_MAP = {
-  siteLogo: `${ASSET_BASE}/assets/ArchiScaffoldinglogo.png`,
-  companyLogo: `${ASSET_BASE}/assets/ArchiScaffoldinglogo.png`,
+  siteLogo: publicAsset('/assets/ArchiScaffoldinglogo.png'),
+  companyLogo: publicAsset('/assets/ArchiScaffoldinglogo.png'),
 
-  emailIcon: `${ASSET_BASE}/assets/emailIcon.png`,
-  whatsappIcon: `${ASSET_BASE}/assets/logos_whatsapp-icon.png`,
-  localizationIcon: `${ASSET_BASE}/assets/localisationsicon.png`,
+  emailIcon: publicAsset('/assets/emailIcon.png'),
+  whatsappIcon: publicAsset('/assets/logos_whatsapp-icon.png'),
+  localizationIcon: publicAsset('/assets/localisationsicon.png'),
 
-  facebookIcon: `${ASSET_BASE}/assets/iconoir_facebook.svg`,
-  instagramIcon: `${ASSET_BASE}/assets/mdi_instagram.svg`,
-  twitterIcon: `${ASSET_BASE}/assets/ri_twitter-x-fill.svg`,
-  linkedinIcon: `${ASSET_BASE}/assets/basil_linkedin-outline.svg`,
-  tiktokIcon: `${ASSET_BASE}/assets/ph_tiktok-logo.svg`,
+  facebookIcon: publicAsset('/assets/iconoir_facebook.svg'),
+  instagramIcon: publicAsset('/assets/mdi_instagram.svg'),
+  twitterIcon: publicAsset('/assets/ri_twitter-x-fill.svg'),
+  linkedinIcon: publicAsset('/assets/basil_linkedin-outline.svg'),
+  tiktokIcon: publicAsset('/assets/ph_tiktok-logo.svg'),
 
-  Facebook: `${ASSET_BASE}/assets/iconoir_facebook.svg`,
-  Instagram: `${ASSET_BASE}/assets/mdi_instagram.svg`,
-  X: `${ASSET_BASE}/assets/ri_twitter-x-fill.svg`,
-  Twitter: `${ASSET_BASE}/assets/ri_twitter-x-fill.svg`,
-  LinkedIn: `${ASSET_BASE}/assets/basil_linkedin-outline.svg`,
-  TikTok: `${ASSET_BASE}/assets/ph_tiktok-logo.svg`,
+  Facebook: publicAsset('/assets/iconoir_facebook.svg'),
+  Instagram: publicAsset('/assets/mdi_instagram.svg'),
+  X: publicAsset('/assets/ri_twitter-x-fill.svg'),
+  Twitter: publicAsset('/assets/ri_twitter-x-fill.svg'),
+  LinkedIn: publicAsset('/assets/basil_linkedin-outline.svg'),
+  TikTok: publicAsset('/assets/ph_tiktok-logo.svg'),
 
-  'Facebook Logo': `${ASSET_BASE}/assets/iconoir_facebook.svg`,
-  'Instagram Logo': `${ASSET_BASE}/assets/mdi_instagram.svg`,
-  'Twitter Logo': `${ASSET_BASE}/assets/ri_twitter-x-fill.svg`,
-  'LinkedIn Logo': `${ASSET_BASE}/assets/basil_linkedin-outline.svg`,
-  'TikTok Logo': `${ASSET_BASE}/assets/ph_tiktok-logo.svg`,
+  'Facebook Logo': publicAsset('/assets/iconoir_facebook.svg'),
+  'Instagram Logo': publicAsset('/assets/mdi_instagram.svg'),
+  'Twitter Logo': publicAsset('/assets/ri_twitter-x-fill.svg'),
+  'LinkedIn Logo': publicAsset('/assets/basil_linkedin-outline.svg'),
+  'TikTok Logo': publicAsset('/assets/ph_tiktok-logo.svg'),
 
-  country: `${ASSET_BASE}/assets/worldwide blue icon.png`,
-  Country: `${ASSET_BASE}/assets/worldwide blue icon.png`,
-  co: `${ASSET_BASE}/assets/worldwide blue icon.png`,
+  country: publicAsset('/assets/worldwide blue icon.png'),
+  Country: publicAsset('/assets/worldwide blue icon.png'),
+  co: publicAsset('/assets/worldwide blue icon.png'),
 
-  language: `${ASSET_BASE}/assets/ic_outline-language.svg`,
-  Language: `${ASSET_BASE}/assets/ic_outline-language.svg`,
-  lan: `${ASSET_BASE}/assets/ic_outline-language.svg`,
+  language: publicAsset('/assets/ic_outline-language.svg'),
+  Language: publicAsset('/assets/ic_outline-language.svg'),
+  lan: publicAsset('/assets/ic_outline-language.svg'),
 };
 
 const isExternal = (v) => /^https?:\/\//i.test(v || '');

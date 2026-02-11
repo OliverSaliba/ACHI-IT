@@ -3,8 +3,7 @@ import React from "react"
 import { motion } from "framer-motion"
 import { useTranslation } from "react-i18next"
 import ImageWebp from "./ImageWebp"
-
-const ASSET_BASE = process.env.PUBLIC_URL || ""
+import { publicAsset } from "../utils/publicAsset"
 
 const StatsHighlights = ({ className = "" }) => {
   const { t } = useTranslation()
@@ -36,8 +35,8 @@ const StatsHighlights = ({ className = "" }) => {
                 className="bg-white shadow-[0_8px_32px_rgba(0,0,0,0.06)] p-[16px] sm:p-[18px] md:p-[22px] flex items-center gap-[12px] sm:gap-[14px] md:gap-[16px]"
               >
                 <ImageWebp
-                  srcWebp={`${ASSET_BASE}/assets/services/${item.icon}.png`}
-                  src={`${ASSET_BASE}/assets/services/${item.icon}.png`}
+                  srcWebp={publicAsset(`/assets/services/${item.icon}.png`)}
+                  src={publicAsset(`/assets/services/${item.icon}.png`)}
                   alt={alt}
                   className="w-[40px] h-[40px] sm:w-[45px] sm:h-[45px] md:w-[52px] md:h-[52px] object-contain flex-shrink-0"
                 />

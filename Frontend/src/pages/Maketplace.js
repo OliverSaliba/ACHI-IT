@@ -2,9 +2,8 @@ import React from 'react';
 import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
 import ImageWebp from '../components/ImageWebp';
+import { publicAsset } from '../utils/publicAsset';
 // import MetaTags from 'react-meta-tags';
-
-const ASSET_BASE = process.env.PUBLIC_URL || "";
 
 const Maketplace = () => {
   const {t} = useTranslation();
@@ -37,9 +36,9 @@ const Maketplace = () => {
         >
           <div className="relative hover:bg-gray-900 group rounded-[17px]">
             <ImageWebp
-              srcWebp={`${ASSET_BASE}/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp`}
+              srcWebp={publicAsset("/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp")}
               className="object-cover w-full h-full group-hover:opacity-50 rounded-[17px]"
-              src={`${ASSET_BASE}/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp`}
+              src={publicAsset("/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp")}
               alt="serviceIcon"
             />
             <div className="block w-full h-fit">
@@ -59,7 +58,7 @@ const Maketplace = () => {
                         className="flex rtl:flex-row-reverse justify-center items-center text-[12px] 2xl:text-[15px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[15px] text-white font-saira font-[600] leading-[29px] py-[10px] px-[30px] bg-[#28509E] rounded-[12px] uppercase hover:bg-[#25D366] border-[#FFF] hover:border-[#25D366] border-solid border-2 transition duration-500"
                       >
                         <img
-                          src={`${ASSET_BASE}/assets/Whatsapp.svg`}
+                          src={publicAsset("/assets/Whatsapp.svg")}
                           className="w-[24px] mr-[10px]"
                           alt="whatsappIcon"
                         />
@@ -81,9 +80,9 @@ const Maketplace = () => {
         >
           <div className="relative hover:bg-gray-900 group rounded-[17px]">
             <ImageWebp
-              srcWebp={`${ASSET_BASE}/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp`}
+              srcWebp={publicAsset("/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp")}
               className="object-cover w-full h-full group-hover:opacity-50 rounded-[17px]"
-              src={`${ASSET_BASE}/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp`}
+              src={publicAsset("/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp")}
               alt="serviceIcon"
             />
             <div className="block w-full h-fit">
@@ -103,7 +102,7 @@ const Maketplace = () => {
                         className="flex rtl:flex-row-reverse justify-center items-center text-[12px] 2xl:text-[15px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[15px] text-white font-saira font-[600] leading-[29px] py-[10px] px-[30px] bg-[#28509E] rounded-[12px] uppercase hover:bg-[#25D366] border-[#FFF] hover:border-[#25D366] border-solid border-2 transition duration-500"
                       >
                         <img
-                          src={`${ASSET_BASE}/assets/Whatsapp.svg`}
+                          src={publicAsset("/assets/Whatsapp.svg")}
                           className="w-[24px] mr-[10px]"
                           alt="whatsappIcon"
                         />
@@ -125,9 +124,9 @@ const Maketplace = () => {
         >
           <div className="relative hover:bg-gray-900 group rounded-[17px]">
             <ImageWebp
-              srcWebp={`${ASSET_BASE}/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp`}
+              srcWebp={publicAsset("/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp")}
               className="object-cover w-full h-full group-hover:opacity-50 rounded-[17px]"
-              src={`${ASSET_BASE}/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp`}
+              src={publicAsset("/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp")}
               alt="serviceIcon"
             />
             <div className="block w-full h-fit">
@@ -147,7 +146,7 @@ const Maketplace = () => {
                         className="flex rtl:flex-row-reverse justify-center items-center text-[12px] 2xl:text-[15px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[15px] text-white font-saira font-[600] leading-[29px] py-[10px] px-[30px] bg-[#28509E] rounded-[12px] uppercase hover:bg-[#25D366] border-[#FFF] hover:border-[#25D366] border-solid border-2 transition duration-500"
                       >
                         <img
-                          src={`${ASSET_BASE}/assets/Whatsapp.svg`}
+                          src={publicAsset("/assets/Whatsapp.svg")}
                           className="w-[24px] mr-[10px]"
                           alt="whatsappIcon"
                         />
@@ -169,9 +168,9 @@ const Maketplace = () => {
         >
           <div className="relative hover:bg-gray-900 group rounded-[17px]">
             <ImageWebp
-              srcWebp={`${ASSET_BASE}/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp`}
+              srcWebp={publicAsset("/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp")}
               className="object-cover w-full h-full group-hover:opacity-50 rounded-[17px]"
-              src={`${ASSET_BASE}/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp`}
+              src={publicAsset("/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp")}
               alt="serviceIcon"
             />
             <div className="block w-full h-fit">
@@ -191,7 +190,7 @@ const Maketplace = () => {
                         className="flex rtl:flex-row-reverse justify-center items-center text-[12px] 2xl:text-[15px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[15px] text-white font-saira font-[600] leading-[29px] py-[10px] px-[30px] bg-[#28509E] rounded-[12px] uppercase hover:bg-[#25D366] border-[#FFF] hover:border-[#25D366] border-solid border-2 transition duration-500"
                       >
                         <img
-                          src={`${ASSET_BASE}/assets/Whatsapp.svg`}
+                          src={publicAsset("/assets/Whatsapp.svg")}
                           className="w-[24px] mr-[10px]"
                           alt="whatsappIcon"
                         />
@@ -213,9 +212,9 @@ const Maketplace = () => {
         >
           <div className="relative hover:bg-gray-900 group rounded-[17px]">
             <ImageWebp
-              srcWebp={`${ASSET_BASE}/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp`}
+              srcWebp={publicAsset("/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp")}
               className="object-cover w-full h-full group-hover:opacity-50 rounded-[17px]"
-              src={`${ASSET_BASE}/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp`}
+              src={publicAsset("/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp")}
               alt="serviceIcon"
             />
             <div className="block w-full h-fit">
@@ -235,7 +234,7 @@ const Maketplace = () => {
                         className="flex rtl:flex-row-reverse justify-center items-center text-[12px] 2xl:text-[15px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[15px] text-white font-saira font-[600] leading-[29px] py-[10px] px-[30px] bg-[#28509E] rounded-[12px] uppercase hover:bg-[#25D366] border-[#FFF] hover:border-[#25D366] border-solid border-2 transition duration-500"
                       >
                         <img
-                          src={`${ASSET_BASE}/assets/Whatsapp.svg`}
+                          src={publicAsset("/assets/Whatsapp.svg")}
                           className="w-[24px] mr-[10px]"
                           alt="whatsappIcon"
                         />
@@ -257,9 +256,9 @@ const Maketplace = () => {
         >
           <div className="relative hover:bg-gray-900 group rounded-[17px]">
             <ImageWebp
-              srcWebp={`${ASSET_BASE}/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp`}
+              srcWebp={publicAsset("/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp")}
               className="object-cover w-full h-full group-hover:opacity-50 rounded-[17px]"
-              src={`${ASSET_BASE}/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp`}
+              src={publicAsset("/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp")}
               alt="serviceIcon"
             />
             <div className="block w-full h-fit">
@@ -279,7 +278,7 @@ const Maketplace = () => {
                         className="flex rtl:flex-row-reverse justify-center items-center text-[12px] 2xl:text-[15px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[15px] text-white font-saira font-[600] leading-[29px] py-[10px] px-[30px] bg-[#28509E] rounded-[12px] uppercase hover:bg-[#25D366] border-[#FFF] hover:border-[#25D366] border-solid border-2 transition duration-500"
                       >
                         <img
-                          src={`${ASSET_BASE}/assets/Whatsapp.svg`}
+                          src={publicAsset("/assets/Whatsapp.svg")}
                           className="w-[24px] mr-[10px]"
                           alt="whatsappIcon"
                         />
@@ -301,9 +300,9 @@ const Maketplace = () => {
         >
           <div className="relative hover:bg-gray-900 group rounded-[17px]">
             <ImageWebp
-              srcWebp={`${ASSET_BASE}/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp`}
+              srcWebp={publicAsset("/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp")}
               className="object-cover w-full h-full group-hover:opacity-50 rounded-[17px]"
-              src={`${ASSET_BASE}/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp`}
+              src={publicAsset("/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp")}
               alt="serviceIcon"
             />
             <div className="block w-full h-fit">
@@ -323,7 +322,7 @@ const Maketplace = () => {
                         className="flex rtl:flex-row-reverse justify-center items-center text-[12px] 2xl:text-[15px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[15px] text-white font-saira font-[600] leading-[29px] py-[10px] px-[30px] bg-[#28509E] rounded-[12px] uppercase hover:bg-[#25D366] border-[#FFF] hover:border-[#25D366] border-solid border-2 transition duration-500"
                       >
                         <img
-                          src={`${ASSET_BASE}/assets/Whatsapp.svg`}
+                          src={publicAsset("/assets/Whatsapp.svg")}
                           className="w-[24px] mr-[10px]"
                           alt="whatsappIcon"
                         />
@@ -345,9 +344,9 @@ const Maketplace = () => {
         >
           <div className="relative hover:bg-gray-900 group rounded-[17px]">
             <ImageWebp
-              srcWebp={`${ASSET_BASE}/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp`}
+              srcWebp={publicAsset("/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp")}
               className="object-cover w-full h-full group-hover:opacity-50 rounded-[17px]"
-              src={`${ASSET_BASE}/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp`}
+              src={publicAsset("/assets/stock-photo-young-woman-using-smart-phone-social-media-concept-1573945981_lossyalpha.webp")}
               alt="serviceIcon"
             />
             <div className="block w-full h-fit">
@@ -367,7 +366,7 @@ const Maketplace = () => {
                         className="flex rtl:flex-row-reverse justify-center items-center text-[12px] 2xl:text-[15px] xl:text-[15px] lg:text-[15px] md:text-[15px] sm:text-[15px] text-white font-saira font-[600] leading-[29px] py-[10px] px-[30px] bg-[#28509E] rounded-[12px] uppercase hover:bg-[#25D366] border-[#FFF] hover:border-[#25D366] border-solid border-2 transition duration-500"
                       >
                         <img
-                          src={`${ASSET_BASE}/assets/Whatsapp.svg`}
+                          src={publicAsset("/assets/Whatsapp.svg")}
                           className="w-[24px] mr-[10px]"
                           alt="whatsappIcon"
                         />
