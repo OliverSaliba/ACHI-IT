@@ -4,6 +4,8 @@ import Slider from "react-slick"
 import { useTranslation } from 'react-i18next'
 import ImageWebp from './ImageWebp'
 
+const ASSET_BASE = process.env.PUBLIC_URL || ""
+
 const WhyChoseUs = ({ direction }) => {
   const { t } = useTranslation()
 
@@ -30,7 +32,8 @@ const WhyChoseUs = ({ direction }) => {
     <section
       id="WhychoseUs"
       aria-labelledby="whychoseus-title"
-      className="py-[60px] mt-[80px] bg-bgwhychose bg-cover bg-center shadow-choseBg"
+      className="py-[60px] mt-[80px] bg-cover bg-center shadow-choseBg"
+      style={{ backgroundImage: `url(${ASSET_BASE}/assets/124553811_724242481518321_2860198893114815692_n.webp)` }}
     >
       <motion.h2
         id="whychoseus-title"

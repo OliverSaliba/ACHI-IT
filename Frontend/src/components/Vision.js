@@ -2,8 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
 
-const Vision = () => {
+const ASSET_BASE = process.env.PUBLIC_URL || ""
 
+const Vision = () => {
   const {t} = useTranslation();
 
   const handleScrollToElement = (e) => {
@@ -15,7 +16,7 @@ const Vision = () => {
     });
   };
   return (
-    <div className="bg-missionBg h-full bg-no-repeat bg-cover bg-center md:bg-initial mb-[60px]">
+    <div className="h-full bg-no-repeat bg-cover bg-center md:bg-initial mb-[60px]" style={{ backgroundImage: `url(${ASSET_BASE}/assets/missionBack_lossyalpha.webp)` }}>
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}

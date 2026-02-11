@@ -43,7 +43,8 @@ const Hero = ({ showMenu, setshowMenu, direction, userLang }) => {
           </video>
         ) : (
           <div
-            className="absolute inset-0 bg-firstSlideBg bg-no-repeat bg-cover bg-center"
+            className="absolute inset-0 bg-no-repeat bg-cover bg-center"
+            style={{ backgroundImage: `url(${base}/assets/firstBgSlide2_lossyalpha.webp)` }}
             aria-hidden="true"
           />
         )}

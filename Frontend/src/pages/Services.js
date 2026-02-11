@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next"
 import ServicesPageAllServices from "../components/services/ServicesPageAllServices"
 import SEO from "../components/SEO"
 
+const ASSET_BASE = process.env.PUBLIC_URL || ""
+
 const Services = () => {
   const { t, i18n } = useTranslation()
 
@@ -23,9 +25,10 @@ const Services = () => {
         aria-label={t(`${NS}.hero.ariaLabel`)}
       >
         <div
-          className={`absolute inset-0 bg-servicePageBanner bg-no-repeat bg-cover bg-center ${
+          className={`absolute inset-0 bg-no-repeat bg-cover bg-center ${
             isArabic ? "scale-x-[-1] origin-center" : ""
           }`}
+          style={{ backgroundImage: `url(${ASSET_BASE}/assets/servicesBanner.png)` }}
           aria-hidden="true"
         />
 

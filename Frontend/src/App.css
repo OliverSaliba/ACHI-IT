@@ -845,10 +845,10 @@ html[dir="rtl"] #sectors main > section:nth-of-type(2) article p * {
 
 #testimonials .slick-slide.slick-current .snip1533 figcaption:before,
 #testimonials .slick-slide.myslick-current .snip1533 figcaption:before {
-  content: url(../public/assets/quoteactive.svg) !important;
+  content: var(--testimonial-quote-active) !important;
 }
 #testimonials .slick-slide .snip1533 figcaption:before {
-  content: url(../public/assets/quoteblue.svg) !important;
+  content: var(--testimonial-quote-blue) !important;
 }
 
 #testimonials .slick-slide {
