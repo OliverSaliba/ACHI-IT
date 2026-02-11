@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import ImageWebp from "./ImageWebp";
 
-const WA_ICON = `${process.env.PUBLIC_URL}/assets/Whatsapp.svg`;
+const ASSET_BASE = process.env.PUBLIC_URL || "";
+const WA_ICON = `${ASSET_BASE}/assets/Whatsapp.svg`;
 
 function GridItems({ index, t }) {
   return (
@@ -21,11 +22,11 @@ function GridItems({ index, t }) {
       >
         <div className="relative group hover:bg-gray-900 overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp="/assets/361641065_768035905323121_6701313797518833287_n2_lossyalpha.webp"
+            srcWebp={`${ASSET_BASE}/assets/361641065_768035905323121_6701313797518833287_n2_lossyalpha.webp`}
             id="switchImageAnim"
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src="/assets/361641065_768035905323121_6701313797518833287_n2_lossyalpha.webp"
+            src={`${ASSET_BASE}/assets/361641065_768035905323121_6701313797518833287_n2_lossyalpha.webp`}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -65,10 +66,10 @@ function GridItems({ index, t }) {
       >
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp="/assets/Suspendedscaffolding12_lossyalpha.webp"
+            srcWebp={`${ASSET_BASE}/assets/Suspendedscaffolding12_lossyalpha.webp`}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src="/assets/Suspendedscaffolding12_lossyalpha.webp"
+            src={`${ASSET_BASE}/assets/Suspendedscaffolding12_lossyalpha.webp`}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -105,10 +106,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="ponteggiSospesi">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp="/assets/SDC14429_lossyalpha.webp"
+            srcWebp={`${ASSET_BASE}/assets/SDC14429_lossyalpha.webp`}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src="/assets/SDC14429_lossyalpha.webp"
+            src={`${ASSET_BASE}/assets/SDC14429_lossyalpha.webp`}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -140,10 +141,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="pontegggiInternee">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp="/assets/HomeBanner42_lossyalpha.webp"
+            srcWebp={`${ASSET_BASE}/assets/HomeBanner42_lossyalpha.webp`}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src="/assets/HomeBanner42_lossyalpha.webp"
+            src={`${ASSET_BASE}/assets/HomeBanner42_lossyalpha.webp`}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -175,10 +176,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="StruturraPortata">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp="/assets/HomeBanner12_lossyalpha.webp"
+            srcWebp={`${ASSET_BASE}/assets/HomeBanner12_lossyalpha.webp`}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src="/assets/HomeBanner12_lossyalpha.webp"
+            src={`${ASSET_BASE}/assets/HomeBanner12_lossyalpha.webp`}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -210,10 +211,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="puntellamenti">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp="/assets/20819369_135108873765021_8187137705964148355_o(1)2_lossyalpha.webp"
+            srcWebp={`${ASSET_BASE}/assets/20819369_135108873765021_8187137705964148355_o(1)2_lossyalpha.webp`}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src="/assets/20819369_135108873765021_8187137705964148355_o(1)2_lossyalpha.webp"
+            src={`${ASSET_BASE}/assets/20819369_135108873765021_8187137705964148355_o(1)2_lossyalpha.webp`}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -245,10 +246,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="scaffoldingDesign">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp="/assets/Scaffoldingdesign2_lossyalpha.webp"
+            srcWebp={`${ASSET_BASE}/assets/Scaffoldingdesign2_lossyalpha.webp`}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src="/assets/Scaffoldingdesign2_lossyalpha.webp"
+            src={`${ASSET_BASE}/assets/Scaffoldingdesign2_lossyalpha.webp`}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -280,10 +281,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="specializedLaborforce">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp="/assets/361641065_768035905323121_6701313797518833287_n2_lossyalpha.webp"
+            srcWebp={`${ASSET_BASE}/assets/361641065_768035905323121_6701313797518833287_n2_lossyalpha.webp`}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src="/assets/361641065_768035905323121_6701313797518833287_n2_lossyalpha.webp"
+            src={`${ASSET_BASE}/assets/361641065_768035905323121_6701313797518833287_n2_lossyalpha.webp`}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -315,10 +316,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="highRiseScaffolding">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp="/assets/SDC14429_lossyalpha.webp"
+            srcWebp={`${ASSET_BASE}/assets/SDC14429_lossyalpha.webp`}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src="/assets/SDC14429_lossyalpha.webp"
+            src={`${ASSET_BASE}/assets/SDC14429_lossyalpha.webp`}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -350,10 +351,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="circularDomeScaffolding">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp="/assets/SDC14429_lossyalpha.webp"
+            srcWebp={`${ASSET_BASE}/assets/SDC14429_lossyalpha.webp`}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src="/assets/SDC14429_lossyalpha.webp"
+            src={`${ASSET_BASE}/assets/SDC14429_lossyalpha.webp`}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -385,10 +386,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="scaffoldingForEvents">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp="/assets/HomeBanner42_lossyalpha.webp"
+            srcWebp={`${ASSET_BASE}/assets/HomeBanner42_lossyalpha.webp`}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src="/assets/HomeBanner42_lossyalpha.webp"
+            src={`${ASSET_BASE}/assets/HomeBanner42_lossyalpha.webp`}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -420,10 +421,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="industrialScaffolding">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp="/assets/HomeBanner42_lossyalpha.webp"
+            srcWebp={`${ASSET_BASE}/assets/HomeBanner42_lossyalpha.webp`}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src="/assets/HomeBanner42_lossyalpha.webp"
+            src={`${ASSET_BASE}/assets/HomeBanner42_lossyalpha.webp`}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -455,10 +456,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="roofScaffolding">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp="/assets/HomeBanner42_lossyalpha.webp"
+            srcWebp={`${ASSET_BASE}/assets/HomeBanner42_lossyalpha.webp`}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src="/assets/HomeBanner42_lossyalpha.webp"
+            src={`${ASSET_BASE}/assets/HomeBanner42_lossyalpha.webp`}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -490,10 +491,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="mobileSuspendedScaffolding">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp="/assets/Suspendedscaffolding12_lossyalpha.webp"
+            srcWebp={`${ASSET_BASE}/assets/Suspendedscaffolding12_lossyalpha.webp`}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src="/assets/Suspendedscaffolding12_lossyalpha.webp"
+            src={`${ASSET_BASE}/assets/Suspendedscaffolding12_lossyalpha.webp`}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -525,10 +526,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="scaffoldingAccessStairs">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp="/assets/SDC14429_lossyalpha.webp"
+            srcWebp={`${ASSET_BASE}/assets/SDC14429_lossyalpha.webp`}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src="/assets/SDC14429_lossyalpha.webp"
+            src={`${ASSET_BASE}/assets/SDC14429_lossyalpha.webp`}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">
@@ -560,10 +561,10 @@ function GridItems({ index, t }) {
       <div className="flex group/parent justify-center items-start flex-col w-full" id="unloadingLoadingPlatforms">
         <div className="relative hover:bg-gray-900 group overflow-hidden" style={{ borderRadius: 0 }}>
           <ImageWebp
-            srcWebp="/assets/SDC14429_lossyalpha.webp"
+            srcWebp={`${ASSET_BASE}/assets/SDC14429_lossyalpha.webp`}
             className="object-cover w-full block group-hover:opacity-50 h-[180px] md:h-[220px] lg:h-[240px] xl:h-[260px]"
             style={{ borderRadius: 0, objectFit: 'cover', width: '100%' }}
-            src="/assets/SDC14429_lossyalpha.webp"
+            src={`${ASSET_BASE}/assets/SDC14429_lossyalpha.webp`}
             alt="Scaffolding service"
           />
           <div className="block w-full h-fit">

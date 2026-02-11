@@ -61,8 +61,8 @@ const WhyChoseUs = ({ direction }) => {
       <Slider {...settings}>
         <div className="flex flex-col items-center bg-[#00204a7a] p-[30px] rounded-[0] h-full">
           <ImageWebp
-            srcWebp="/assets/shield(1)1_lossyalpha.webp"
-            src="/assets/shield(1)1_lossyalpha.webp"
+            srcWebp={`${ASSET_BASE}/assets/shield(1)1_lossyalpha.webp`}
+            src={`${ASSET_BASE}/assets/shield(1)1_lossyalpha.webp`}
             alt="Safety-driven scaffolding systems aligned with site constraints"
             className="mb-[20px] w-[60px]"
           />
@@ -76,8 +76,8 @@ const WhyChoseUs = ({ direction }) => {
 
         <div className="flex flex-col items-center bg-[#00204a7a] p-[30px] rounded-[0] h-full">
           <ImageWebp
-            srcWebp="/assets/support1_lossyalpha.webp"
-            src="/assets/support1_lossyalpha.webp"
+            srcWebp={`${ASSET_BASE}/assets/support1_lossyalpha.webp`}
+            src={`${ASSET_BASE}/assets/support1_lossyalpha.webp`}
             alt="Reliable scaffolding support and execution for time-sensitive projects"
             className="mb-[20px] w-[60px]"
           />
@@ -91,8 +91,8 @@ const WhyChoseUs = ({ direction }) => {
 
         <div className="flex flex-col items-center bg-[#00204a7a] p-[30px] rounded-[0] h-full">
           <ImageWebp
-            srcWebp="/assets/technical-support1_lossyalpha.webp"
-            src="/assets/technical-support1_lossyalpha.webp"
+            srcWebp={`${ASSET_BASE}/assets/technical-support1_lossyalpha.webp`}
+            src={`${ASSET_BASE}/assets/technical-support1_lossyalpha.webp`}
             alt="Technical guidance and clear communication with contractors and engineers"
             className="mb-[20px] w-[60px]"
           />
@@ -106,8 +106,8 @@ const WhyChoseUs = ({ direction }) => {
 
         <div className="flex flex-col items-center bg-[#00204a7a] p-[30px] rounded-[0] h-full">
           <ImageWebp
-            srcWebp="/assets/inventory1_lossyalpha.webp"
-            src="/assets/inventory1_lossyalpha.webp"
+            srcWebp={`${ASSET_BASE}/assets/inventory1_lossyalpha.webp`}
+            src={`${ASSET_BASE}/assets/inventory1_lossyalpha.webp`}
             alt="Execution-ready scaffolding inventory and modular equipment availability"
             className="mb-[20px] w-[60px]"
           />
@@ -121,8 +121,8 @@ const WhyChoseUs = ({ direction }) => {
 
         <div className="flex flex-col items-center bg-[#00204a7a] p-[30px] rounded-[0] h-full">
           <ImageWebp
-            srcWebp="/assets/design-team1.png"
-            src="/assets/design-team1.png"
+            srcWebp={`${ASSET_BASE}/assets/design-team1.png`}
+            src={`${ASSET_BASE}/assets/design-team1.png`}
             alt="Operational experience and engineering support for complex scaffolding projects"
             className="mb-[20px] w-[60px]"
           />

@@ -7,6 +7,8 @@ import ImageWebp from "../ImageWebp"
 import { useLangRouter } from "../../routing/LangRouter"
 import { buildPathWithLang } from "../../utils/langRouting"
 
+const ASSET_BASE = process.env.PUBLIC_URL || ""
+
 const LEBANON_SERVICE_KEYS = ["facades", "suspended", "proppingShoring", "adjustableProps", "highCapacity", "eventScaffolding"]
 
 const ITALIAN_SERVICE_KEYS = [
@@ -26,28 +28,28 @@ const ITALIAN_SERVICE_KEYS = [
 ]
 
 const SERVICES_LEBANON = [
-  { key: "facades", imgWebp: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png", img: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png" },
-  { key: "suspended", imgWebp: "/assets/services/Suspended scaffolding 1 2(1).png", img: "/assets/services/Suspended scaffolding 1 2(1).png" },
-  { key: "proppingShoring", imgWebp: "/assets/services/SDC14429(1).png", img: "/assets/services/SDC14429(1).png" },
-  { key: "adjustableProps", imgWebp: "/assets/services/20819369_135108873765021_8187137705964148355_o (1) 2(1).png", img: "/assets/services/20819369_135108873765021_8187137705964148355_o (1) 2(1).png" },
-  { key: "highCapacity", imgWebp: "/assets/workDone/BEIRUT BUSINESS CENTER - SEN EL FIL/SDC17897.JPG", img: "/assets/workDone/BEIRUT BUSINESS CENTER - SEN EL FIL/SDC17897.JPG" },
-  { key: "eventScaffolding", imgWebp: "/assets/services/eventScaffolding.jpeg", img: "/assets/services/eventScaffolding.jpeg" }
+  { key: "facades", imgWebp: `${ASSET_BASE}/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png`, img: `${ASSET_BASE}/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png` },
+  { key: "suspended", imgWebp: `${ASSET_BASE}/assets/services/Suspended scaffolding 1 2(1).png`, img: `${ASSET_BASE}/assets/services/Suspended scaffolding 1 2(1).png` },
+  { key: "proppingShoring", imgWebp: `${ASSET_BASE}/assets/services/SDC14429(1).png`, img: `${ASSET_BASE}/assets/services/SDC14429(1).png` },
+  { key: "adjustableProps", imgWebp: `${ASSET_BASE}/assets/services/20819369_135108873765021_8187137705964148355_o (1) 2(1).png`, img: `${ASSET_BASE}/assets/services/20819369_135108873765021_8187137705964148355_o (1) 2(1).png` },
+  { key: "highCapacity", imgWebp: `${ASSET_BASE}/assets/workDone/BEIRUT BUSINESS CENTER - SEN EL FIL/SDC17897.JPG`, img: `${ASSET_BASE}/assets/workDone/BEIRUT BUSINESS CENTER - SEN EL FIL/SDC17897.JPG` },
+  { key: "eventScaffolding", imgWebp: `${ASSET_BASE}/assets/services/eventScaffolding.jpeg`, img: `${ASSET_BASE}/assets/services/eventScaffolding.jpeg` }
 ]
 
 const SERVICES_ITALY = [
-  { key: "manodopera", imgWebp: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png", img: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png" },
-  { key: "ponteggiSospesi", imgWebp: "/assets/services/Suspended scaffolding 1 2(1).png", img: "/assets/services/Suspended scaffolding 1 2(1).png" },
-  { key: "noleggioCaldo", imgWebp: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png", img: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png" },
-  { key: "noleggioFreddo", imgWebp: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png", img: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png" },
-  { key: "ponteggiFacciate", imgWebp: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png", img: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png" },
-  { key: "ponteggiPonte", imgWebp: "/assets/services/Suspended scaffolding 1 2(1).png", img: "/assets/services/Suspended scaffolding 1 2(1).png" },
-  { key: "impalcatureEventi", imgWebp: "/assets/services/eventScaffolding.jpeg", img: "/assets/services/eventScaffolding.jpeg" },
-  { key: "coperturaSottotetto", imgWebp: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png", img: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png" },
-  { key: "costruzioniSpeciali", imgWebp: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png", img: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png" },
-  { key: "sicurezzaLavoro", imgWebp: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png", img: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png" },
-  { key: "multidirezionali", imgWebp: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png", img: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png" },
-  { key: "tradizionaliTelai", imgWebp: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png", img: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png" },
-  { key: "tubiGiunti", imgWebp: "/assets/services/20819369_135108873765021_8187137705964148355_o (1) 2(1).png", img: "/assets/services/20819369_135108873765021_8187137705964148355_o (1) 2(1).png" },
+  { key: "manodopera", imgWebp: `${ASSET_BASE}/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png`, img: `${ASSET_BASE}/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png` },
+  { key: "ponteggiSospesi", imgWebp: `${ASSET_BASE}/assets/services/Suspended scaffolding 1 2(1).png`, img: `${ASSET_BASE}/assets/services/Suspended scaffolding 1 2(1).png` },
+  { key: "noleggioCaldo", imgWebp: `${ASSET_BASE}/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png`, img: `${ASSET_BASE}/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png` },
+  { key: "noleggioFreddo", imgWebp: `${ASSET_BASE}/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png`, img: `${ASSET_BASE}/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png` },
+  { key: "ponteggiFacciate", imgWebp: `${ASSET_BASE}/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png`, img: `${ASSET_BASE}/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png` },
+  { key: "ponteggiPonte", imgWebp: `${ASSET_BASE}/assets/services/Suspended scaffolding 1 2(1).png`, img: `${ASSET_BASE}/assets/services/Suspended scaffolding 1 2(1).png` },
+  { key: "impalcatureEventi", imgWebp: `${ASSET_BASE}/assets/services/eventScaffolding.jpeg`, img: `${ASSET_BASE}/assets/services/eventScaffolding.jpeg` },
+  { key: "coperturaSottotetto", imgWebp: `${ASSET_BASE}/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png`, img: `${ASSET_BASE}/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png` },
+  { key: "costruzioniSpeciali", imgWebp: `${ASSET_BASE}/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png`, img: `${ASSET_BASE}/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png` },
+  { key: "sicurezzaLavoro", imgWebp: `${ASSET_BASE}/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png`, img: `${ASSET_BASE}/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png` },
+  { key: "multidirezionali", imgWebp: `${ASSET_BASE}/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png`, img: `${ASSET_BASE}/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png` },
+  { key: "tradizionaliTelai", imgWebp: `${ASSET_BASE}/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png`, img: `${ASSET_BASE}/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png` },
+  { key: "tubiGiunti", imgWebp: `${ASSET_BASE}/assets/services/20819369_135108873765021_8187137705964148355_o (1) 2(1).png`, img: `${ASSET_BASE}/assets/services/20819369_135108873765021_8187137705964148355_o (1) 2(1).png` },
 ]
 
 const LEBANON_KEY_TO_SLUG = {

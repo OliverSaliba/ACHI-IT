@@ -1317,31 +1317,31 @@
       "title": "تابعونا",
       "facebook": {
         "url": "https://www.facebook.com/ACHISCAFF",
-        "icon": "/assets/iconoir_facebook.svg",
+        "icon": "assets/iconoir_facebook.svg",
         "alt": "فيسبوك",
         "aria": "صفحة فيسبوك عشي للسقالات"
       },
       "instagram": {
         "url": "https://www.instagram.com/achiscaffoldinglb",
-        "icon": "/assets/mdi_instagram.svg",
+        "icon": "assets/mdi_instagram.svg",
         "alt": "إنستغرام",
         "aria": "صفحة إنستغرام عشي للسقالات"
       },
       "x": {
         "url": "https://x.com/AchiScaffolding",
-        "icon": "/assets/ri_twitter-x-fill.svg",
+        "icon": "assets/ri_twitter-x-fill.svg",
         "alt": "إكس",
         "aria": "حساب إكس عشي للسقالات"
       },
       "linkedin": {
         "url": "https://www.linkedin.com/company/achi-scaffolding/",
-        "icon": "/assets/basil_linkedin-outline.svg",
+        "icon": "assets/basil_linkedin-outline.svg",
         "alt": "لينكدإن",
         "aria": "صفحة لينكدإن عشي للسقالات"
       },
       "tiktok": {
         "url": "https://www.tiktok.com/@achiscaffolding",
-        "icon": "/assets/ph_tiktok-logo.svg",
+        "icon": "assets/ph_tiktok-logo.svg",
         "alt": "تيك توك",
         "aria": "حساب تيك توك عشي للسقالات"
       }

@@ -47,40 +47,42 @@ const activateWebpCompatibility = () => {
   if (!getWebpCompatibilityInfo()) webpCompatibilityTest();
 };
 
+const ASSET_BASE = process.env.PUBLIC_URL || '';
+
 const ICON_MAP = {
-  siteLogo: '/assets/ArchiScaffoldinglogo.png',
-  companyLogo: '/assets/ArchiScaffoldinglogo.png',
+  siteLogo: `${ASSET_BASE}/assets/ArchiScaffoldinglogo.png`,
+  companyLogo: `${ASSET_BASE}/assets/ArchiScaffoldinglogo.png`,
 
-  emailIcon: '/assets/emailIcon.png',
-  whatsappIcon: '/assets/logos_whatsapp-icon.png',
-  localizationIcon: '/assets/localisationsicon.png',
+  emailIcon: `${ASSET_BASE}/assets/emailIcon.png`,
+  whatsappIcon: `${ASSET_BASE}/assets/logos_whatsapp-icon.png`,
+  localizationIcon: `${ASSET_BASE}/assets/localisationsicon.png`,
 
-  facebookIcon: '/assets/iconoir_facebook.svg',
-  instagramIcon: '/assets/mdi_instagram.svg',
-  twitterIcon: '/assets/ri_twitter-x-fill.svg',
-  linkedinIcon: '/assets/basil_linkedin-outline.svg',
-  tiktokIcon: '/assets/ph_tiktok-logo.svg',
+  facebookIcon: `${ASSET_BASE}/assets/iconoir_facebook.svg`,
+  instagramIcon: `${ASSET_BASE}/assets/mdi_instagram.svg`,
+  twitterIcon: `${ASSET_BASE}/assets/ri_twitter-x-fill.svg`,
+  linkedinIcon: `${ASSET_BASE}/assets/basil_linkedin-outline.svg`,
+  tiktokIcon: `${ASSET_BASE}/assets/ph_tiktok-logo.svg`,
 
-  Facebook: '/assets/iconoir_facebook.svg',
-  Instagram: '/assets/mdi_instagram.svg',
-  X: '/assets/ri_twitter-x-fill.svg',
-  Twitter: '/assets/ri_twitter-x-fill.svg',
-  LinkedIn: '/assets/basil_linkedin-outline.svg',
-  TikTok: '/assets/ph_tiktok-logo.svg',
+  Facebook: `${ASSET_BASE}/assets/iconoir_facebook.svg`,
+  Instagram: `${ASSET_BASE}/assets/mdi_instagram.svg`,
+  X: `${ASSET_BASE}/assets/ri_twitter-x-fill.svg`,
+  Twitter: `${ASSET_BASE}/assets/ri_twitter-x-fill.svg`,
+  LinkedIn: `${ASSET_BASE}/assets/basil_linkedin-outline.svg`,
+  TikTok: `${ASSET_BASE}/assets/ph_tiktok-logo.svg`,
 
-  'Facebook Logo': '/assets/iconoir_facebook.svg',
-  'Instagram Logo': '/assets/mdi_instagram.svg',
-  'Twitter Logo': '/assets/ri_twitter-x-fill.svg',
-  'LinkedIn Logo': '/assets/basil_linkedin-outline.svg',
-  'TikTok Logo': '/assets/ph_tiktok-logo.svg',
+  'Facebook Logo': `${ASSET_BASE}/assets/iconoir_facebook.svg`,
+  'Instagram Logo': `${ASSET_BASE}/assets/mdi_instagram.svg`,
+  'Twitter Logo': `${ASSET_BASE}/assets/ri_twitter-x-fill.svg`,
+  'LinkedIn Logo': `${ASSET_BASE}/assets/basil_linkedin-outline.svg`,
+  'TikTok Logo': `${ASSET_BASE}/assets/ph_tiktok-logo.svg`,
 
-  country: '/assets/worldwide blue icon.png',
-  Country: '/assets/worldwide blue icon.png',
-  co: '/assets/worldwide blue icon.png',
+  country: `${ASSET_BASE}/assets/worldwide blue icon.png`,
+  Country: `${ASSET_BASE}/assets/worldwide blue icon.png`,
+  co: `${ASSET_BASE}/assets/worldwide blue icon.png`,
 
-  language: '/assets/ic_outline-language.svg',
-  Language: '/assets/ic_outline-language.svg',
-  lan: '/assets/ic_outline-language.svg',
+  language: `${ASSET_BASE}/assets/ic_outline-language.svg`,
+  Language: `${ASSET_BASE}/assets/ic_outline-language.svg`,
+  lan: `${ASSET_BASE}/assets/ic_outline-language.svg`,
 };
 
 const isExternal = (v) => /^https?:\/\//i.test(v || '');

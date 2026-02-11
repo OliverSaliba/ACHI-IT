@@ -54,8 +54,8 @@ const Footer = () => {
                 />
               ) : (
                 <ImageWebp
-                  srcWebp="/assets/ArchiScaffoldinglogo_lossyalpha.webp"
-                  src="/assets/ArchiScaffoldinglogo_lossyalpha.webp"
+                  srcWebp={`${ASSET}/assets/ArchiScaffoldinglogo_lossyalpha.webp`}
+                  src={`${ASSET}/assets/ArchiScaffoldinglogo_lossyalpha.webp`}
                   alt={t("footer.logoAlt")}
                   className="max-w-[140px] h-auto block"
                 />
@@ -196,7 +196,7 @@ const Footer = () => {
                 aria-label={t("footer.social.facebook.aria")}
               >
                 <img
-                  src={`${ASSET}${t("footer.social.facebook.icon")}`}
+                  src={`${ASSET}/${t("footer.social.facebook.icon")}`}
                   alt={t("footer.social.facebook.alt")}
                   className="w-[20px] h-[20px]"
                   width="20"
@@ -212,7 +212,7 @@ const Footer = () => {
                 aria-label={t("footer.social.instagram.aria")}
               >
                 <img
-                  src={`${ASSET}${t("footer.social.instagram.icon")}`}
+                  src={`${ASSET}/${t("footer.social.instagram.icon")}`}
                   alt={t("footer.social.instagram.alt")}
                   className="w-[20px] h-[20px]"
                   width="20"
@@ -228,7 +228,7 @@ const Footer = () => {
                 aria-label={t("footer.social.x.aria")}
               >
                 <img
-                  src={`${ASSET}${t("footer.social.x.icon")}`}
+                  src={`${ASSET}/${t("footer.social.x.icon")}`}
                   alt={t("footer.social.x.alt")}
                   className="w-[20px] h-[20px]"
                   width="20"
@@ -244,7 +244,7 @@ const Footer = () => {
                 aria-label={t("footer.social.linkedin.aria")}
               >
                 <img
-                  src={`${ASSET}${t("footer.social.linkedin.icon")}`}
+                  src={`${ASSET}/${t("footer.social.linkedin.icon")}`}
                   alt={t("footer.social.linkedin.alt")}
                   className="w-[20px] h-[20px]"
                   width="20"
@@ -260,7 +260,7 @@ const Footer = () => {
                 aria-label={t("footer.social.tiktok.aria")}
                 >
                 <img
-                  src={`${ASSET}${t("footer.social.tiktok.icon")}`}
+                  src={`${ASSET}/${t("footer.social.tiktok.icon")}`}
                   alt={t("footer.social.tiktok.alt")}
                   className="w-[20px] h-[20px]"
                   width="20"

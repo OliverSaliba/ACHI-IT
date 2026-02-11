@@ -993,31 +993,31 @@
       "title": "Follow us",
       "facebook": {
         "url": "https://www.facebook.com/ACHISCAFF",
-        "icon": "/assets/iconoir_facebook.svg",
+        "icon": "assets/iconoir_facebook.svg",
         "alt": "Facebook",
         "aria": "ACHI Scaffolding Facebook page"
       },
       "instagram": {
         "url": "https://www.instagram.com/achiscaffoldinglb",
-        "icon": "/assets/mdi_instagram.svg",
+        "icon": "assets/mdi_instagram.svg",
         "alt": "Instagram",
         "aria": "ACHI Scaffolding Instagram page"
       },
       "x": {
         "url": "https://x.com/AchiScaffolding",
-        "icon": "/assets/ri_twitter-x-fill.svg",
+        "icon": "assets/ri_twitter-x-fill.svg",
         "alt": "X",
         "aria": "ACHI Scaffolding X account"
       },
       "linkedin": {
         "url": "https://www.linkedin.com/company/achi-scaffolding/",
-        "icon": "/assets/basil_linkedin-outline.svg",
+        "icon": "assets/basil_linkedin-outline.svg",
         "alt": "LinkedIn",
         "aria": "ACHI Scaffolding LinkedIn page"
       },
       "tiktok": {
         "url": "https://www.tiktok.com/@achiscaffolding",
-        "icon": "/assets/ph_tiktok-logo.svg",
+        "icon": "assets/ph_tiktok-logo.svg",
         "alt": "TikTok",
         "aria": "ACHI Scaffolding TikTok account"
       }
