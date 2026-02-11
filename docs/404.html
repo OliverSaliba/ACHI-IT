@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,follow" />
+    <script>
+      (function () {
+        var pathname = window.location.pathname;
+        var search = window.location.search;
+        var hash = window.location.hash;
+        var base = "/ACHI-IT";
+        var baseSlash = base + "/";
+
+        if ((pathname === base || pathname === baseSlash) && search.indexOf("p=") !== -1) return;
+
+        var pathWithoutBase = pathname.indexOf(base) === 0
+          ? (pathname.slice(base.length) || "/")
+          : pathname;
+        var redirect = pathWithoutBase + search + hash;
+        if (!redirect || redirect === "/") return;
+
+        var newUrl = window.location.protocol + "//" + window.location.host + base + "/?p=" + encodeURIComponent(redirect);
+        window.location.replace(newUrl);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
