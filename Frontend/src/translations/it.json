@@ -1,0 +1,619 @@
+{
+    "header": {
+        "Lebanon": "Libano",
+        "langItalian": "Passa all'italiano"
+    },
+    "langDropwn": {
+        "arabic": "Arabo",
+        "english": "Inglese",
+        "french": "Francese",
+        "italian": "Italiano"
+    },
+    "nav": {
+        "home": "Home",
+        "about": "Chi siamo",
+        "services": "Servizi",
+        "sectors": "Settori",
+        "products": "Prodotti",
+        "clients": "Clienti",
+        "projects": "I nostri lavori",
+        "blog": "Blog",
+        "careers": "Lavora con noi",
+        "gallery": "Galleria",
+        "contact": "Contatti",
+        "marketplace": "Marketplace"
+    },
+    "sections": {
+        "services": "Servizi"
+    },
+    "home": {
+        "hero": {
+            "title": "Ponteggi & Opere Provvisionali in Italia",
+            "subtitle": "Soluzioni ingegnerizzate per ponteggi e lavori temporanei in tutta Italia – conformi alle normative 2026.",
+            "ctaSupport": "Richiedi Supporto Tecnico"
+        },
+        "servicesIntro": "Soluzioni professionali per ogni cantiere temporaneo: noleggio ponteggi multidirezionali, fissi, a telai prefabbricati e tubo-giunto. Montaggio rapido, smontaggio sicuro, progettazione PIMUS e conformità aggiornamenti 2026 (Legge 198/2025 ex DL 159/2025: priorità protezione collettiva caduta dall'alto, badge cantiere, premialità INAIL per aziende virtuose). Operiamo ovunque in Italia con trasporto incluso, da Roma (sede Via degli Scipioni 132) a tutta la penisola.",
+        "services": {
+            "cardsCta": "Scopri di più",
+            "cards": {
+                "manodopera": {
+                    "title": "Manodopera specializzata",
+                    "desc": "Fornitura manodopera qualificata: montatori patentinati, preposti, capi squadra e tecnici PIMUS in tutta Italia.",
+                    "href": "/services/manodopera-specializzata",
+                    "alt": "Manodopera specializzata per ponteggi"
+                },
+                "noleggioCaldo": {
+                    "title": "Noleggio a caldo",
+                    "desc": "Materiale + montatori specializzati per montaggio/smontaggio e gestione cantiere, conformità 2026.",
+                    "href": "/services/noleggio-a-caldo",
+                    "alt": "Noleggio a caldo ponteggi"
+                },
+                "sospesi": {
+                    "title": "Ponteggi sospesi",
+                    "desc": "Ponteggi sospesi per lavoro in quota: facciate, edifici alti, ispezioni e manutenzione in tutta Italia.",
+                    "href": "/services/ponteggi-sospesi",
+                    "alt": "Ponteggi sospesi"
+                }
+            },
+            "listIt": [
+                { "title": "Manodopera specializzata", "slug": "/services/manodopera-specializzata" },
+                { "title": "Noleggio a caldo", "slug": "/services/noleggio-a-caldo" },
+                { "title": "Ponteggi per facciate", "slug": "/services" },
+                { "title": "Ponteggi sospesi", "slug": "/services/ponteggi-sospesi" },
+                { "title": "Piattaforme per sale interne", "slug": "/services" },
+                { "title": "Ponteggi per ponte", "slug": "/services" },
+                { "title": "Scale", "slug": "/services" },
+                { "title": "Impalcature per eventi", "slug": "/services" },
+                { "title": "Copertura provvisoria per recupero sottotetto", "slug": "/services" },
+                { "title": "Ponteggi per costruzioni speciali", "slug": "/services" },
+                { "title": "Consulenza e progettazione", "slug": "/services" },
+                { "title": "Sicurezza sul lavoro", "slug": "/services" },
+                { "title": "Ponteggi Multidirezionali", "slug": "/services" },
+                { "title": "Ponteggi tradizionali", "slug": "/services" },
+                { "title": "Ponteggi tubi e giunti", "slug": "/services" },
+                { "title": "Montacarichi", "slug": "/services" },
+                { "title": "Puntellamenti", "slug": "/services" },
+                { "title": "Puntelli", "slug": "/services" },
+                { "title": "Parapetti", "slug": "/services" }
+            ]
+        },
+        "floating": {
+            "phoneE164": "+393318007652",
+            "callAria": "Chiama ACHI Ponteggi +39 331 800 7652",
+            "whatsappHref": "https://wa.me/393318007652",
+            "whatsappAria": "WhatsApp ACHI Ponteggi",
+            "whatsappAlt": "WhatsApp",
+            "openSocialAria": "Apri link social",
+            "closeSocialAria": "Chiudi link social"
+        }
+    },
+    "homeServicesOverview": {
+        "title": "Servizi",
+        "viewAll": "Vedi tutti",
+        "items": {
+            "facade": {
+                "title": "Ponteggi per facciate",
+                "alt": "Sistemi di ponteggi per facciate"
+            },
+            "suspended": {
+                "title": "Ponteggi sospesi",
+                "alt": "Ponteggi sospesi per accesso in quota"
+            },
+            "proppingShoring": {
+                "title": "Piattaforme per sale interne",
+                "alt": "Piattaforme per ambienti interni"
+            }
+        }
+    },
+    "homeSectors": {
+        "title": "Settori",
+        "scrollHint": "Scorri per esplorare"
+    },
+    "about": {
+        "seo": {
+            "title": "Chi Siamo | ACHI Servizi e Appalti – Ponteggi, Restauro e Servizi Edili in Italia",
+            "description": "ACHI Servizi e Appalti: noleggio e montaggio ponteggi, manodopera specializzata, supporto restauro monumentale e interno in tutta Italia. Certificati INAIL – conformi Legge 198/2025. Sede Roma. Preventivo 331 800 7652."
+        },
+        "hero": {
+            "imageAria": "Immagine hero Chi Siamo ACHI Servizi e Appalti",
+            "panelTitleLine1": "ACHI SERVIZI E APPALTI:",
+            "panelTitleLine2": "PONTEGGI E SUPPORTO EDILI E INDUSTRIALI IN TUTTA ITALIA",
+            "panelBody": "ACHI Servizi e Appalti è un'azienda italiana con sede a Roma (Via degli Scipioni 132, 00192 RM – P.IVA 17231971007) specializzata in noleggio e montaggio ponteggi, manodopera qualificata patentinata, supporto per restauro monumentale e interno, e servizi edili/industriali. Operiamo in tutta Italia dal 2024 con squadre certificate (patentino Allegato XXI, badge cantiere 2026, patente a crediti INL), materiali conformi UNI EN 12810/12811 e piena conformità Legge 198/2025 (ex DL 159/2025). Assistenza 24/7 e trasporto incluso ovunque."
+        },
+        "main": {
+            "h1": "ACHI Servizi e Appalti: Ponteggi e Supporto Edili e Industriali in Tutta Italia",
+            "srOnly": "ACHI Servizi e Appalti: noleggio e montaggio ponteggi, manodopera specializzata, supporto restauro monumentale e interno in tutta Italia. Certificati INAIL – conformi Legge 198/2025. Sede Roma. Preventivo 331 800 7652.",
+            "p1": "ACHI Servizi e Appalti nasce nel 2024 come evoluzione di un'esperienza consolidata nel settore dei ponteggi e delle opere provvisionali. Oggi siamo un punto di riferimento per imprese edili, condomini, amministratori, restauratori, enti pubblici e privati che cercano soluzioni sicure, rapide e conformi alle normative più recenti.",
+            "p2": "Cosa Facciamo",
+            "bullets": {
+                "b1": "Noleggio e montaggio ponteggi (multidirezionali, telai prefabbricati, tubi e giunti, sospesi)",
+                "b2": "Fornitura manodopera specializzata (montatori patentinati, preposti, tecnici PIMUS)",
+                "b3": "Supporto per progetti di restauro monumentale e interno (impalcature leggere, puntellature, accesso in quota)"
+            },
+            "p3": "• Scale, trabattelli e piattaforme per lavori interni ed esterni\n• Puntellature e sostegni temporanei\n• Coperture provvisorie per sottotetto\n• Impalcature per eventi e costruzioni speciali\n• Consulenza e progettazione PIMUS\n\nDove Operiamo\nCopriamo tutta Italia con logistica dedicata:\n• Lazio (Roma e provincia – base operativa)\n• Lombardia (Milano, Bergamo, Brescia)\n• Campania (Napoli, Salerno)\n• Toscana (Firenze, Arezzo, Siena)\n• Veneto (Verona, Padova, Venezia)\n• Emilia-Romagna (Bologna, Parma)\n• Puglia (Bari, Lecce)\n• Sicilia (Palermo, Catania)\n• Piemonte (Torino)\n• Liguria, Sardegna e altre regioni su richiesta"
+        },
+        "cards": {
+            "mission": {
+                "title": "La Nostra Missione",
+                "body": "Garantire accesso sicuro in quota, tempi rapidi, prezzi trasparenti e sicurezza assoluta.\n\n• Patentino Allegato XXI + aggiornamenti obbligatori per ogni operaio\n• Badge cantiere con QR anticontraffazione (obbligatorio 2026)\n• Patente a crediti INL verificata\n• Legge 198/2025: priorità protezione collettiva caduta >2 m\n• Premialità INAIL per basso tasso infortuni\n• Collaborazione con restauratori qualificati MiC per beni vincolati",
+                "cta": "Vedi i nostri progetti"
+            },
+            "vision": {
+                "title": "Valori ACHI",
+                "body": "• Trasparenza: preventivi chiari, prezzi indicativi 2026 sempre visibili\n• Sicurezza: zero compromessi su normative e certificazioni\n• Rapidità: montaggio veloce, consegna in tutta Italia\n• Flessibilità: soluzioni su misura per privati, condomini, imprese, restauratori\n• Affidabilità: assistenza 24/7, logistica dedicata",
+                "cta": "Contattaci ora – WhatsApp 331 800 7652 o compila il form."
+            }
+        },
+        "ctaLine1": "Vuoi conoscere meglio il nostro team o richiedere un preventivo?",
+        "ctaLine2": "Contattaci ora – WhatsApp 331 800 7652 o compila il form.",
+        "legalDisclaimer": "ACHI Servizi e Appalti fornisce ponteggi, impalcature, manodopera qualificata e supporto per accesso in quota. Non eseguiamo interventi diretti di restauro artistico su beni culturali vincolati senza restauratori qualificati MiC. Per progetti su beni tutelati collaboriamo con professionisti autorizzati.",
+        "finalCtaLine1": "Scegli ACHI per il tuo prossimo progetto edile, industriale o di restauro.",
+        "finalCtaLine2": "Chiama ora 331 800 7652 o invia richiesta – risposta rapida garantita"
+    },
+    "banner1": {
+        "title": "Scaffolding & \n shoring services",
+        "subtitle": "Professional scaffolding services since 1993.",
+        "button": "send us your enquiry over whatsapp"
+    },
+    "banner2" : {
+        "title" : "we are ready for your \n project in all lebanon",
+        "subtitle" : "Full-service scaffolding contracting since 1993. ",
+        "button" : "send us your enquiry over whatsapp"
+    },
+    "banner3" : {
+        "title" : "We sell used &\n new equipement",
+        "subtitle" : "Supply of New and Used construction equipment",
+        "button" : "send us your enquiry over whatsapp"
+    },
+    "service" : {
+        "title" : "Our Services",
+        "firstService" : "Installation and rental of scaffolding for Facades",
+        "secondService" : "Installation and rental of Suspended scaffolding",
+        "thirdService" : "Propping and shoring systems",
+        "fourthService" : "Installation and rental of scaffolding for indoor spaces",
+        "fifthService" : "Installation and rental of high capacity structures",
+        "sixthService" : "Adjustable props rental & Sales",
+        "seventhService" : "Scaffolding design",
+        "eighthService" : "Digital services",
+        "ninthService" : "Specialized Laborforce",
+        "tenthService" : "High-Rise Scaffolding",
+        "eleventhService" : "Circular & Dome Scaffolding",
+        "twelfthService" : "Scaffolding for Events",
+        "thirteenthService" : "Industrial Scaffolding",
+        "fourteenthService" : "Roof Scaffolding",
+        "fifteenthService" : "Mobile Suspended Scaffolding (for Bridges)",
+        "sixteenthService" : "Scaffolding Access Stairs",
+        "seventeenthService" : "Unloading & Loading Platforms",
+        "contactBtn" : "Contact us",
+        "title2" : "Professionals initiative",
+        "title2br" : "Professionals \ninitiative"
+    },
+    "aboutUs" : {
+        "titleMultiLine" : "30+ years of\n SCAFFOLDING\n experience",
+        "title" : "30+ years of SCAFFOLDING experience",
+        "description" : "Since its establishment in 1993 by engineer Barbar Achi, Achi Scaffolding has evolved into a reputable provider of expert scaffolding and formwork services in Lebanon. Our professional team takes immense pride in building a solid foundation of trust by delivering reliable and high-quality scaffold structures for diverse projects, including shopping malls, towers, residential buildings, and universities.",
+        "additionalText" : "Give us call or send us your inquiry over whatsapp for prompt response"
+    },
+    "clients" : {
+        "title" : "Our Clients"
+    },
+    "vision" : {
+        "title" : "Our vision",
+        "description" : "At Achi Scaffolding, we're charting a visionary course towards a future where scaffolding isn't merely a structural necessity; it's an embodiment of innovation, unparalleled safety, and sustainable advancement, defining the infrastructure of tomorrow.",
+        "btnText" : "invest with us"
+    },
+    "mission" : {
+        "title" : "the mission",
+        "description" : "We specialize in comprehensive scaffolding services, from rental to installation,\n and sell and export a diverse range of new and used construction equipment in the Middle East and Africa.",
+        "btnText" : "let's talk"
+    },
+    "values" : {
+        "title" : "Values",
+        "firstValueTitle" : "Safety First",
+        "firstValueDescription" : "Ensuring a safe environment for our workers and clients is paramount.",
+        "secondValueTitle" : "Quality Commitment",
+        "secondValueDescription" : "We deliver only the highest quality in all our projects.",
+        "thirdValueTitle" : "Innovation",
+        "thirdValueDescription" : "We embrace the latest technologies and methodologies in the scaffolding industry.",
+        "fourthValueTitle" : "Sustainability",
+        "fourthValueDescription" : "We prioritize eco-friendly practices for a better future",
+        "fifthValueTitle" : "Partnership",
+        "fifthValueDescription" : "Building strong and lasting relationships with our clients and suppliers.",
+        "sixthValueTitle" : "Integrity",
+        "sixthValueDescription" : "We operate with transparency, honesty, and ethical standards."
+    },
+    "testimonials" : {
+        "title" : "What our clients say about us"
+    },
+    "contactForm" : {
+        "titleDesktop" : "Let’s talk!",
+        "titleMobile" : "Avvia il tuo progetto",
+        "btnText" : "Invia",
+        "hero": { "title": "Parliamone", "subline": "Dal calcolo dei carichi alla consegna in cantiere, i nostri tecnici sono a disposizione per il tuo progetto in tutta Italia." },
+        "form": {
+            "title": "Modulo di richiesta",
+            "name": { "label": "Nome / Azienda", "placeholder": "Nome o ragione sociale" },
+            "surname": { "label": "Cognome", "placeholder": "Il tuo cognome" },
+            "company": { "label": "Azienda", "placeholder": "Ragione sociale (se diversa)" },
+            "phone": { "label": "Telefono / WhatsApp", "placeholder": "Numero di telefono o WhatsApp" },
+            "email": { "label": "Email", "placeholder": "La tua email" },
+            "location": { "label": "Regione / Città", "placeholder": "Regione e città del cantiere" },
+            "service": { "label": "Tipo richiesta (preventivo, consulenza, informazioni)", "placeholder": "Seleziona il tipo di richiesta", "options": { "facade": "Ponteggi per facciate", "suspended": "Ponteggi sospesi", "highRise": "Ponteggi per edifici alti", "highCapacity": "Strutture ad alta capacità", "shoring": "Puntellature e sostegni", "industrial": "Ponteggi industriali", "circularDome": "Ponteggi circolari e a cupola", "eventScaffolding": "Impalcature per eventi", "roof": "Ponteggi per coperture", "mobileSuspended": "Ponteggi sospesi mobili (ponti)", "accessStairs": "Scale di accesso", "loadingPlatforms": "Piattaforme di carico", "adjustableProps": "Puntelli regolabili", "laborforce": "Manodopera specializzata", "design": "Progettazione PIMUS", "digital": "Servizi digitali", "other": "Altro / Richiesta generale" } },
+            "message": { "label": "Messaggio", "placeholder": "Descrivi la tua richiesta..." },
+            "fileUpload": { "label": "Carica planimetrie / documenti", "accept": "PDF, JPG, PNG, DOC, DOCX", "button": "Scegli file", "noFile": "Nessun file scelto" },
+            "submit": "Invia richiesta", "submitting": "Invio in corso...", "success": "Grazie! La tua richiesta è stata inviata. Ti contatteremo al più presto.", "error": "Si è verificato un errore. Riprova o contattaci direttamente.",
+            "validation": { "required": "Campo obbligatorio", "email": "Inserisci un'email valida", "phone": "Inserisci un numero di telefono valido" },
+            "gdpr": "Acconsento al trattamento dei dati personali secondo la normativa sulla privacy (GDPR)."
+        },
+        "contactCard": {
+            "title": "Contatto diretto",
+            "whatsapp": {
+                "title": "Chat con un esperto",
+                "text": "Risposta rapida per esigenze di cantiere.",
+                "button": "Apri WhatsApp",
+                "aria": "Chat con esperto ACHI Ponteggi su WhatsApp",
+                "href": "https://wa.me/393318007652"
+            },
+            "phone": {
+                "office": {
+                    "label": "Telefono",
+                    "number": "+39 331 800 7652",
+                    "href": "+393318007652"
+                }
+            },
+            "email": {
+                "general": {
+                    "label": "Informazioni",
+                    "address": "inquiries@achiscaffolding.com",
+                    "href": "inquiries@achiscaffolding.com"
+                }
+            },
+            "coverage": "Servizio in tutta Italia."
+        }
+    },
+    "footer" : {
+        "ourcontacts" : "I nostri contatti",
+        "contactus": "Contattaci",
+        "followus": "Seguici",
+        "contact": {
+            "title": "Contatti",
+            "phoneLabel": "Telefono",
+            "phoneText": "+39 331 800 7652",
+            "phoneHref": "+393318007652",
+            "emailLabel": "Email",
+            "emailText": "inquiries@achiscaffolding.com",
+            "emailHref": "inquiries@achiscaffolding.com",
+            "location": "Italia"
+        },
+        "links": {
+            "ariaLabel": "Navigazione footer",
+            "home": "Home",
+            "about": "Chi siamo",
+            "services": "Servizi",
+            "clients": "Clienti",
+            "sectors": "Settori",
+            "projects": "I nostri lavori",
+            "blog": "Blog",
+            "gallery": "Galleria",
+            "privacy": "Privacy Policy"
+        },
+        "locations": "",
+        "copyright": "Tutti i diritti riservati.",
+        "secondaryMenu": [
+            { "label": "Normative 2026", "path": "/normative-2026" },
+            { "label": "Prezzi 2026", "path": "/prezzi-2026" },
+            { "label": "Collaborazioni e Subappalti", "path": "/collaborazioni-subappalti" },
+            { "label": "Privacy Policy", "path": "/privacy-policy" },
+            { "label": "Cookie Policy", "path": "/cookie-policy" },
+            { "label": "Condizioni Generali di Vendita/Noleggio", "path": "/condizioni-generali" }
+        ]
+    },
+    "inputs" : {
+        "emailPlaceholder" : "Email",
+        "namePlaceholder" : "Nome / Azienda",
+        "phonePlaceholder" : "Telefono / WhatsApp",
+        "messagePlaceholder" : "Messaggio"
+    },
+    "servicesPage": {
+        "seo": {
+            "title": "Servizi Ponteggi Italia | ACHI Ponteggi",
+            "description": "Servizi ponteggi in Italia: manodopera specializzata, noleggio a caldo, ponteggi sospesi. Conformi Legge 198/2025. Preventivo gratuito.",
+            "canonical": "https://achiscaffolding.com/it/services"
+        },
+        "srOnly": { "entityDefinition": "ACHI Ponteggi offre servizi di ponteggi e opere provvisorie in tutta Italia." },
+        "hero": {
+            "ariaLabel": "Servizi ponteggi e opere provvisorie",
+            "title": "Servizi",
+            "description": "Manodopera specializzata, noleggio a caldo e ponteggi sospesi in tutta Italia. Conformi alle normative 2026.",
+            "whatsapp": {
+                "href": "https://wa.me/393318007652",
+                "label": "Richiedi preventivo su WhatsApp",
+                "ariaLabel": "Contatta ACHI Ponteggi su WhatsApp"
+            }
+        },
+        "main": { "ariaLabel": "Elenco servizi ponteggi" },
+        "allServices": {
+            "title": "I nostri servizi",
+            "description": "Manodopera specializzata per ponteggi, noleggio a caldo con montatore patentinato e ponteggi sospesi. Operiamo in tutta Italia con conformità Legge 198/2025.",
+            "listAriaLabel": "Elenco servizi ponteggi Italia"
+        },
+        "listSection": {
+            "title": "Tutti i servizi in elenco",
+            "description": "Sfoglia l'elenco completo e accedi alla scheda di ogni servizio.",
+            "listAriaLabel": "Elenco completo servizi ponteggi"
+        }
+    },
+    "singleService": {
+        "manodopera": {
+            "seo": {
+                "title": "Manodopera Specializzata per Ponteggi Italia | ACHI Ponteggi",
+                "description": "Fornitura manodopera specializzata per ponteggi: montatori patentinati, preposti, capi squadra, tecnici PIMUS in tutta Italia. Conformi Legge 198/2025, badge cantiere, patente a crediti. Costi da 18 €/ora – Preventivo 331 800 7652."
+            },
+            "a11y": { "skipToContent": "Salta al contenuto" },
+            "hero": {
+                "h1": "Manodopera Specializzata per Ponteggi e Cantieri – Affidabile in Tutta Italia",
+                "intro": "ACHI Ponteggi fornisce manodopera qualificata per ponteggi e cantieri in tutta Italia: montatori patentinati, preposti, capi squadra e tecnici PIMUS, conformi alla Legge 198/2025, con badge cantiere e patente a crediti. Costi da 18 €/ora. Richiedi preventivo gratuito.",
+                "secondaryButton": "Vedi i nostri progetti",
+                "secondaryButtonAria": "Vai alla pagina progetti"
+            },
+            "images": {
+                "heroAlt": "Manodopera specializzata per ponteggi e cantieri",
+                "safetyAlt": "Sicurezza e coordinamento in cantiere per manodopera specializzata"
+            },
+            "overview": {
+                "paragraph": "Forniamo personale qualificato per montaggio, smontaggio e gestione di ponteggi in tutta Italia, in linea con le normative 2026 e la Legge 198/2025.",
+                "chips": { "0": "Montatori patentinati", "1": "Preposti e capi squadra", "2": "Tecnici PIMUS" }
+            },
+            "sections": {
+                "typicalApplications": {
+                    "title": "Descrizione Dettagliata – Offriamo",
+                    "intro": "La nostra manodopera specializzata comprende:",
+                    "bullets": {
+                        "0": "Montatori patentinati per ponteggi, con patente a crediti e badge cantiere",
+                        "1": "Preposti e capi squadra per coordinamento in cantiere",
+                        "2": "Tecnici PIMUS per progettazione e verifica strutture",
+                        "3": "Addetti al montaggio e smontaggio, conformi Legge 198/2025"
+                    },
+                    "closing": "Tutto il personale è in regola con i requisiti normativi 2026 e disponibile in tutta Italia."
+                },
+                "urbanConstraints": {
+                    "title": "Requisiti Normativi 2026",
+                    "intro": "La nostra manodopera rispetta i requisiti di legge vigenti.",
+                    "leadIn": "In particolare:",
+                    "bullets": {
+                        "0": "Conformità alla Legge 198/2025 e al D.Lgs 81/08",
+                        "1": "Badge cantiere e patente a crediti dove richiesto",
+                        "2": "Formazione PIMUS per tecnici e preposti",
+                        "3": "Assicurazione INAIL e documentazione in regola"
+                    },
+                    "closing": "Garantiamo personale formato e documentato per operare in sicurezza su ogni cantiere."
+                },
+                "engineeringApproach": {
+                    "title": "Prezzi Indicativi 2026",
+                    "intro": "I costi sono indicativi e dipendono da qualifica, zona e durata.",
+                    "bullets": {
+                        "0": "Manodopera specializzata da circa 18 €/ora (montatori, addetti)",
+                        "1": "Preposti e capi squadra a quotazione dedicata",
+                        "2": "Tecnici PIMUS e figure specializzate su preventivo",
+                        "3": "Trasferte e trasporti quotati in base alla sede del cantiere"
+                    },
+                    "closing": "Richiedi un preventivo gratuito per avere un’offerta su misura."
+                },
+                "safetyCoordination": {
+                    "title": "Sicurezza e Coordinamento",
+                    "intro": "La sicurezza in cantiere è prioritaria. Il nostro personale opera secondo le procedure vigenti.",
+                    "leadIn": "Impegni principali:",
+                    "bullets": {
+                        "0": "Rispetto del D.Lgs 81/08 e della Legge 198/2025",
+                        "1": "Uso di DPI e dispositivi di protezione collettiva",
+                        "2": "Coordinamento con committente e altri lavoratori",
+                        "3": "Documentazione e tracciabilità delle presenze"
+                    },
+                    "closing": "Forniamo solo manodopera formata e in regola con le normative di sicurezza."
+                },
+                "whyMatters": {
+                    "title": "Vantaggi per Te Cliente",
+                    "intro": "Scegliere la nostra manodopera specializzata significa:",
+                    "bullets": {
+                        "0": "Personale qualificato e conforme alle normative 2026",
+                        "1": "Copertura in tutta Italia con preventivo rapido",
+                        "2": "Costi trasparenti da 18 €/ora e quotazioni su misura"
+                    },
+                    "closing": "Contattaci per un preventivo senza impegno."
+                },
+                "locationCoverage": {
+                    "title": "Copertura Territoriale",
+                    "text": "Forniamo manodopera specializzata per ponteggi in tutta Italia, da Roma (sede Via degli Scipioni 132) a tutte le regioni. Trasferte e trasporti quotati su richiesta."
+                }
+            },
+            "cta": {
+                "title": "Richiedi Preventivo",
+                "text1": "Hai bisogno di manodopera specializzata per ponteggi o cantieri?",
+                "text2": "Contattaci per un preventivo gratuito: rispondiamo in 24 ore. Puoi scriverci su WhatsApp o compilare il modulo.",
+                "buttonText": "Richiedi preventivo",
+                "buttonAria": "Richiedi preventivo per manodopera specializzata"
+            }
+        },
+        "noleggioCaldo": {
+            "seo": {
+                "title": "Noleggio a Caldo Ponteggi Italia | Con Montatore Patentinato – ACHI",
+                "description": "Noleggio a caldo ponteggi: materiale + montatori specializzati patentinati in tutta Italia. Prezzi 2026 da 18 €/ora operatore + noleggio mq. Conformi Legge 198/2025, badge cantiere, PIMUS. Preventivo rapido 331 800 7652."
+            },
+            "a11y": { "skipToContent": "Salta al contenuto" },
+            "hero": {
+                "h1": "Noleggio a Caldo Ponteggi – Con Operatore e Montaggio Chiavi in Mano in Tutta Italia",
+                "intro": "Il noleggio a caldo unisce materiale e montatori specializzati: ponteggi già montati e pronti all’uso, con operatore patentinato incluso. Servizio chiavi in mano in tutta Italia, conformi Legge 198/2025 e normative 2026. Prezzi da 18 €/ora operatore + noleggio a mq.",
+                "secondaryButton": "Vedi i nostri progetti",
+                "secondaryButtonAria": "Vai alla pagina progetti"
+            },
+            "images": {
+                "heroAlt": "Noleggio a caldo ponteggi con operatore e montaggio",
+                "safetyAlt": "Montaggio e sicurezza nel noleggio a caldo ponteggi"
+            },
+            "overview": {
+                "paragraph": "Con il noleggio a caldo ricevi materiale e montaggio in un’unica soluzione: il fornitore installa e smonta i ponteggi con proprio personale patentinato, in conformità con le normative vigenti.",
+                "chips": { "0": "Materiale + montatore", "1": "Montaggio e smontaggio inclusi", "2": "Conformità 2026" }
+            },
+            "sections": {
+                "typicalApplications": {
+                    "title": "Cos'è il Noleggio a Caldo?",
+                    "intro": "Il noleggio a caldo prevede:",
+                    "bullets": {
+                        "0": "Fornitura del materiale (ponteggi, telai, tavole, parapetti)",
+                        "1": "Montaggio e smontaggio a cura del fornitore con personale patentinato",
+                        "2": "Operatore/montatore incluso nel servizio, senza gestione diretta da parte del cliente",
+                        "3": "Prezzi in genere a mq o a ora operatore + noleggio materiale"
+                    },
+                    "closing": "Ideale quando non si dispone di squadre interne o si preferisce un servizio chiavi in mano."
+                },
+                "urbanConstraints": {
+                    "title": "Differenza con Noleggio a Freddo",
+                    "intro": "Nel noleggio a freddo il cliente riceve solo il materiale e provvede al montaggio con propri o terzi montatori.",
+                    "leadIn": "Nel noleggio a caldo:",
+                    "bullets": {
+                        "0": "Il fornitore monta e smonta con proprio personale",
+                        "1": "Non serve assumere o coordinare montatori in proprio",
+                        "2": "Responsabilità di montaggio e conformità restano in capo al fornitore",
+                        "3": "Quando il fornitore esegue anche la direzione dei lavori si configura subappalto"
+                    },
+                    "closing": "Quando il fornitore dirige materialmente i lavori in cantiere, il rapporto può configurarsi come subappalto: ti consigliamo di chiarire sempre con il tuo legale."
+                },
+                "engineeringApproach": {
+                    "title": "Prezzi Indicativi 2026",
+                    "intro": "I costi sono indicativi e variano in base a zona, quantità e durata.",
+                    "bullets": {
+                        "0": "Operatore/montatore patentinato da circa 18 €/ora",
+                        "1": "Noleggio materiale a mq o a lotto, su preventivo",
+                        "2": "Montaggio e smontaggio inclusi nel pacchetto a caldo",
+                        "3": "Trasferte e trasporti quotati in base alla sede"
+                    },
+                    "closing": "Richiedi un preventivo per avere un’offerta personalizzata."
+                },
+                "safetyCoordination": {
+                    "title": "Normative e Sicurezza 2026",
+                    "intro": "Il noleggio a caldo deve rispettare le stesse normative del montaggio ponteggi.",
+                    "leadIn": "In particolare:",
+                    "bullets": {
+                        "0": "Conformità Legge 198/2025, D.Lgs 81/08 e PIMUS ove richiesto",
+                        "1": "Badge cantiere e patente a crediti per i montatori",
+                        "2": "Coordinamento con RSPP e committente",
+                        "3": "Documentazione e certificazioni in regola"
+                    },
+                    "closing": "ACHI Ponteggi garantisce montatori formati e servizio conforme alle normative vigenti."
+                },
+                "whyMatters": {
+                    "title": "Vantaggi per Te",
+                    "intro": "Scegliere il noleggio a caldo significa:",
+                    "bullets": {
+                        "0": "Un solo interlocutore per materiale e montaggio",
+                        "1": "Nessuna gestione diretta di squadre di montaggio",
+                        "2": "Conformità normativa a carico del fornitore"
+                    },
+                    "closing": "Contattaci per un preventivo rapido. Invia richiesta e ricevi risposta in 24 ore."
+                },
+                "locationCoverage": {
+                    "title": "Copertura Territoriale",
+                    "text": "Servizio di noleggio a caldo disponibile in tutta Italia. Sede a Roma (Via degli Scipioni 132). Preventivo rapido e montaggio chiavi in mano ovunque."
+                }
+            },
+            "cta": {
+                "title": "Richiedi Preventivo",
+                "text1": "Hai bisogno di noleggio a caldo con montatore patentinato?",
+                "text2": "Compila il modulo o contattaci su WhatsApp per un preventivo rapido. Rispondiamo in 24 ore. Invia Richiesta → Risposta in 24 ore.",
+                "buttonText": "Invia richiesta → Risposta in 24 ore",
+                "buttonAria": "Invia richiesta preventivo noleggio a caldo"
+            }
+        },
+        "sospesi": {
+            "seo": {
+                "title": "Ponteggi Sospesi Italia | Noleggio e Montaggio – ACHI",
+                "description": "Ponteggi sospesi per lavoro in quota in tutta Italia: facciate, edifici alti, ispezioni e manutenzione. Sistemi sospesi certificati, conformi Legge 198/2025 e D.Lgs 81/08. Preventivo gratuito 331 800 7652."
+            },
+            "a11y": { "skipToContent": "Salta al contenuto" },
+            "hero": {
+                "h1": "Ponteggi Sospesi – Noleggio e Montaggio per Lavoro in Quota in Tutta Italia",
+                "intro": "Ponteggi sospesi per accesso in quota dove i ponteggi a terra non sono utilizzabili: facciate alte, edifici, ispezioni e manutenzione. ACHI Ponteggi offre piattaforme sospese e sistemi di accesso sospesi in tutta Italia, conformi alla Legge 198/2025 e al D.Lgs 81/08.",
+                "secondaryButton": "Vedi i nostri progetti",
+                "secondaryButtonAria": "Vai alla pagina progetti"
+            },
+            "images": {
+                "heroAlt": "Ponteggi sospesi per lavoro in quota in Italia",
+                "safetyAlt": "Sicurezza e montaggio ponteggi sospesi, conformità normative"
+            },
+            "overview": {
+                "paragraph": "I ponteggi sospesi consentono l’accesso in quota su facciate e edifici alti senza occupare suolo. Offriamo noleggio e montaggio di sistemi sospesi certificati in tutta Italia.",
+                "chips": { "0": "Lavoro in quota", "1": "Facciate alte", "2": "Ispezioni e manutenzione" }
+            },
+            "sections": {
+                "typicalApplications": {
+                    "title": "Applicazioni Tipiche",
+                    "intro": "I ponteggi sospesi sono indicati per:",
+                    "bullets": {
+                        "0": "Lavori in facciata su edifici alti e torri",
+                        "1": "Ispezioni e manutenzione di involucri edilizi",
+                        "2": "Cantieri con spazio a terra limitato o assente",
+                        "3": "Ristrutturazioni e rifacimento facciate con accesso sospeso"
+                    },
+                    "closing": "La scelta del sistema sospeso dipende da altezza, carichi e tipologia di edificio."
+                },
+                "urbanConstraints": {
+                    "title": "Vantaggi dei Ponteggi Sospesi",
+                    "intro": "Rispetto ai ponteggi a terra, i sistemi sospesi offrono:",
+                    "leadIn": "In particolare:",
+                    "bullets": {
+                        "0": "Minima occupazione del suolo e della viabilità",
+                        "1": "Accesso continuo lungo tutta la facciata",
+                        "2": "Montaggio e smontaggio gestiti da personale specializzato",
+                        "3": "Conformità alle normative su lavoro in quota e caduta dall’alto"
+                    },
+                    "closing": "Ideali per contesti urbani e edifici con poco spazio a terra."
+                },
+                "engineeringApproach": {
+                    "title": "Normative e Sicurezza 2026",
+                    "intro": "I nostri ponteggi sospesi sono conformi alle normative vigenti.",
+                    "bullets": {
+                        "0": "Conformità Legge 198/2025 e D.Lgs 81/08",
+                        "1": "Certificazioni e PIMUS ove richiesto",
+                        "2": "Montaggio da personale patentinato con badge cantiere",
+                        "3": "Documentazione e tracciabilità per ogni cantiere"
+                    },
+                    "closing": "Garantiamo strutture sicure e documentazione in regola."
+                },
+                "safetyCoordination": {
+                    "title": "Sicurezza e Coordinamento",
+                    "intro": "Il lavoro su ponteggi sospesi richiede coordinamento con RSPP e committente.",
+                    "leadIn": "Impegni:",
+                    "bullets": {
+                        "0": "Montaggio e verifica secondo normativa e PIMUS",
+                        "1": "DPI e sistemi di protezione collettiva",
+                        "2": "Coordinamento con altre maestranze in cantiere",
+                        "3": "Prevenzione caduta dall’alto e protezione pedoni"
+                    },
+                    "closing": "Operiamo in tutta Italia con squadre formate e certificate."
+                },
+                "whyMatters": {
+                    "title": "Vantaggi ACHI",
+                    "intro": "Scegliere ACHI Ponteggi per i ponteggi sospesi significa:",
+                    "bullets": {
+                        "0": "Noleggio e montaggio in tutta Italia con preventivo gratuito",
+                        "1": "Conformità Legge 198/2025 e normative 2026",
+                        "2": "Sistemi certificati e personale specializzato"
+                    },
+                    "closing": "Contattaci per un preventivo senza impegno."
+                },
+                "locationCoverage": {
+                    "title": "Copertura Territoriale",
+                    "text": "Noleggio e montaggio ponteggi sospesi in tutta Italia. Sede a Roma (Via degli Scipioni 132). Preventivo gratuito e risposta in 24 ore."
+                }
+            },
+            "cta": {
+                "title": "Richiedi Preventivo",
+                "text1": "Hai bisogno di ponteggi sospesi per facciate o lavoro in quota?",
+                "text2": "Contattaci per un preventivo gratuito. Compila il modulo o scrivici su WhatsApp: rispondiamo in 24 ore.",
+                "buttonText": "Richiedi preventivo",
+                "buttonAria": "Richiedi preventivo ponteggi sospesi"
+            }
+        }
+    }
+}
+

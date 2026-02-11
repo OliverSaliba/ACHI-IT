@@ -1,0 +1,33 @@
+/* ========== Scrollbar / layout shift prevention (global) ========== */
+/* Reserve space for vertical scrollbar so content never shifts left/right */
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Fallback for browsers that don't support scrollbar-gutter (e.g. older Safari) */
+@supports not (scrollbar-gutter: stable) {
+  body {
+    margin-right: calc(100vw - 100%);
+  }
+}
+
+.hero-title-rajdhani {
+  font-family: var(--app-font, "Open Sans", Arial, Helvetica, sans-serif) !important;
+  font-size: 42px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+
+/* Sectors scroll lock: keep navbar visible with backdrop when body is fixed */
+.sectors-scroll-locked header nav {
+  background: rgba(40, 80, 158, 0.9);
+  backdrop-filter: blur(12px);
+}
+.sectors-scroll-locked header {
+  z-index: 999999;
+}

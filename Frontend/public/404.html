@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,follow" />
+    <script>
+      (function () {
+        var pathname = window.location.pathname;
+        var search = window.location.search;
+        var hash = window.location.hash;
+        var l = window.location;
+
+        var newUrl = l.protocol + "//" + l.host + "/?p=" + encodeURIComponent(l.pathname + l.search + l.hash)
+        window.location.replace(newUrl)
+
+        // Prevent redirect loop if already on ?p=
+        if (search.indexOf("?p=") === 0) return;
+
+        var redirect = pathname + search + hash;
+
+        // Safety check
+        if (!redirect || redirect === "/") return;
+
+        window.location.replace("/?p=" + encodeURIComponent(redirect));
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

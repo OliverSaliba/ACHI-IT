@@ -1,0 +1,13 @@
+# https://www.robotstxt.org/robotstxt.html
+# Robots.txt for ACHI Scaffolding
+
+User-agent: *
+Allow: /
+
+# Disallow admin / internal-only pages
+Disallow: /admin/
+Disallow: /login/
+Disallow: /dashboard/
+
+# Sitemap
+Sitemap: https://achiscaffolding.com/sitemap.xml

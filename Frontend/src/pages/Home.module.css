@@ -1,0 +1,15 @@
+/* Home.module.css */
+.homeSnapshotSection {
+  background: #F8FAFD;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 56px;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+@media (min-width: 768px) {
+  .homeSnapshotSection {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
