@@ -303,52 +303,6 @@ html, body {
   overflow-x: hidden;
 }
 
-@font-face {
-  font-family: 'Spartan';
-  src: local('Spartan'), url(../public/fonts/Spartan-Regular.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Spartan';
-  font-weight: 100;
-  src: local('Spartan'), url(../public/fonts/Spartan-Thin.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Spartan';
-  font-weight: 200;
-  src: local('Spartan'), url(../public/fonts/Spartan-ExtraLight.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Spartan';
-  font-weight: 300;
-  src: local('Spartan'), url(../public/fonts/Spartan-Light.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Spartan';
-  font-weight: 400;
-  src: local('Spartan'), url(../public/fonts/Spartan-Medium.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Spartan';
-  font-weight: 500;
-  src: local('Spartan'), url(../public/fonts/Spartan-SemiBold.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Spartan';
-  font-weight: 600;
-  src: local('Spartan'), url(../public/fonts/Spartan-Bold.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Spartan';
-  font-weight: 700;
-  src: local('Spartan'), url(../public/fonts/Spartan-ExtraBold.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Spartan';
-  font-weight: 900;
-  src: local('Spartan'), url(../public/fonts/Spartan-Black.ttf) format('truetype');
-}
-
-
 #root {
   white-space: pre-line;
 }

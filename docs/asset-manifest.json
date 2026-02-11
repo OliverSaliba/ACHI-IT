@@ -1,32 +1,17 @@
 {
   "files": {
-    "main.css": "/ACHI-IT/static/css/main.f82ed895.css",
-    "main.js": "/ACHI-IT/static/js/main.34cc2443.js",
-    "static/media/servicesBanner.png": "/ACHI-IT/static/media/servicesBanner.12123d1890872e5e932d.png",
-    "static/media/firstBgSlide2_lossyalpha.webp": "/ACHI-IT/static/media/firstBgSlide2_lossyalpha.2af4fd83a0ee7e0b6a53.webp",
-    "static/media/124553811_724242481518321__n.webp": "/ACHI-IT/static/media/124553811_724242481518321_2860198893114815692_n.5d4484b5b79efd607c5e.webp",
-    "static/media/missionBack_lossyalpha.webp": "/ACHI-IT/static/media/missionBack_lossyalpha.9b6d7d59ef1c99f38463.webp",
-    "static/media/Spartan-ExtraBold.ttf": "/ACHI-IT/static/media/Spartan-ExtraBold.ce5ec967d86c748e20ee.ttf",
-    "static/media/Spartan-Black.ttf": "/ACHI-IT/static/media/Spartan-Black.a6dc98c3c726e50eb8f3.ttf",
-    "static/media/Spartan-Medium.ttf": "/ACHI-IT/static/media/Spartan-Medium.a1134e630ced5e21dd92.ttf",
-    "static/media/Spartan-SemiBold.ttf": "/ACHI-IT/static/media/Spartan-SemiBold.56928e6fa799541ca40a.ttf",
-    "static/media/Spartan-ExtraLight.ttf": "/ACHI-IT/static/media/Spartan-ExtraLight.1b39dca2619320f12439.ttf",
-    "static/media/Spartan-Light.ttf": "/ACHI-IT/static/media/Spartan-Light.3fb0b2d6ddc9672430f7.ttf",
-    "static/media/Spartan-Regular.ttf": "/ACHI-IT/static/media/Spartan-Regular.e6c19f62235a53490ec2.ttf",
-    "static/media/Spartan-Thin.ttf": "/ACHI-IT/static/media/Spartan-Thin.dafa3a94f65cb47d1205.ttf",
-    "static/media/Spartan-Bold.ttf": "/ACHI-IT/static/media/Spartan-Bold.386419b2a5c9d587e458.ttf",
+    "main.css": "/ACHI-IT/static/css/main.b1d83db4.css",
+    "main.js": "/ACHI-IT/static/js/main.3e33cce2.js",
     "index.html": "/ACHI-IT/index.html",
     "static/media/slick.svg": "/ACHI-IT/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/ACHI-IT/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/ACHI-IT/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/ACHI-IT/static/media/slick.295183786cd8a1389865.woff",
-    "static/media/quoteblue.svg": "/ACHI-IT/static/media/quoteblue.b5de49310be7ab4d0734.svg",
-    "static/media/quoteactive.svg": "/ACHI-IT/static/media/quoteactive.d358f087d0aed32e2126.svg",
-    "main.f82ed895.css.map": "/ACHI-IT/static/css/main.f82ed895.css.map",
-    "main.34cc2443.js.map": "/ACHI-IT/static/js/main.34cc2443.js.map"
+    "main.b1d83db4.css.map": "/ACHI-IT/static/css/main.b1d83db4.css.map",
+    "main.3e33cce2.js.map": "/ACHI-IT/static/js/main.3e33cce2.js.map"
   },
   "entrypoints": [
-    "static/css/main.f82ed895.css",
-    "static/js/main.34cc2443.js"
+    "static/css/main.b1d83db4.css",
+    "static/js/main.3e33cce2.js"
   ]
 }
