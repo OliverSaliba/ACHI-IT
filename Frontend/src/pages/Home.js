@@ -11,6 +11,7 @@ import Clients from "../components/Clients"
 import Testimonials from "../components/Testimonials"
 import BlogSection from "../components/BlogSection"
 import SectorsScrollStory from "../components/SectorsScrollStory"
+import SectorsBar from "../components/SectorsBar"
 import SEO from "../components/SEO"
 import SmartLink from "../seo/SmartLink"
 import AeoIntroBlock from "../components/AeoIntroBlock"
@@ -27,8 +28,10 @@ const sectionReveal = {
 }
 
 const Home = ({ showMenu, setshowMenu, direction, userLang }) => {
+  const { t, i18n } = useTranslation()
+  const lang = String(i18n.resolvedLanguage || i18n.language || "").toLowerCase()
+  const useSevenCardsSectors = !/^it$/i.test(lang)
   const ASSET = process.env.PUBLIC_URL || ""
-  const { t } = useTranslation()
   const baseUrl = "https://achiscaffolding.com"
   const [socialOpen, setSocialOpen] = useState(false)
 
@@ -379,7 +382,7 @@ const Home = ({ showMenu, setshowMenu, direction, userLang }) => {
       <motion.div {...sectionReveal}>
         <WhyChoseUs direction={direction} />
       </motion.div>
-      <SectorsScrollStory />
+      {useSevenCardsSectors ? <SectorsBar /> : <SectorsScrollStory />}
       <motion.div {...sectionReveal}>
         <Testimonials direction={direction} />
       </motion.div>

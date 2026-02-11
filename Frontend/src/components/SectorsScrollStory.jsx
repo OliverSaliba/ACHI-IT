@@ -1,7 +1,7 @@
 // SectorsScrollStory: page scroll stops when section reaches sticky point; sectors advance one-by-one.
 // Unlock on first scroll intent when at last slide (scroll down) or first slide (scroll up).
-// Premium/game-like UI only on Italian home page; scroll logic unchanged for all locales.
-import React, { useEffect, useMemo, useState, useRef } from "react"
+// Same design for all locales (glass card, progress bar, navbar-blue titles, slide animations).
+import React, { useEffect, useState, useRef } from "react"
 import { motion, useReducedMotion } from "framer-motion"
 import { useTranslation } from "react-i18next"
 import { sectors } from "../data/sectors"
@@ -43,26 +43,15 @@ function restoreScrollAndNudge(targetY, direction) {
   })
 }
 
-const DEFAULT_THEME = { accent: "rgb(40, 80, 158)", gradient: "linear-gradient(135deg, #28509e 0%, #1b3155 100%)", glow: "rgba(40, 80, 158, 0.45)" }
+const NAVBAR_BLUE = "rgb(40, 80, 158)"
+const NAVBAR_BLUE_DARK = "#1b3155"
 
 const SectorsScrollStory = () => {
-  const { t, i18n } = useTranslation()
-  const isItalianHome = String(i18n?.resolvedLanguage || i18n?.language || "").toLowerCase().startsWith("it")
+  const { t } = useTranslation()
   const sectionRef = useRef(null)
   const reduceMotion = useReducedMotion()
 
-  const theme = useMemo(() => ({
-    renovation: { accent: "#c2410c", gradient: "linear-gradient(135deg, #ea580c 0%, #9a3412 100%)", glow: "rgba(194, 65, 12, 0.4)" },
-    construction: { accent: "#0d9488", gradient: "linear-gradient(135deg, #0d9488 0%, #115e59 100%)", glow: "rgba(13, 148, 136, 0.4)" },
-    domes: { accent: "#7c3aed", gradient: "linear-gradient(135deg, #8b5cf6 0%, #5b21b6 100%)", glow: "rgba(124, 58, 237, 0.4)" },
-    events: { accent: "#dc2626", gradient: "linear-gradient(135deg, #ef4444 0%, #b91c1c 100%)", glow: "rgba(220, 38, 38, 0.4)" },
-    industrial: { accent: "#64748b", gradient: "linear-gradient(135deg, #64748b 0%, #334155 100%)", glow: "rgba(100, 116, 139, 0.4)" },
-    oilGas: { accent: "#ca8a04", gradient: "linear-gradient(135deg, #eab308 0%, #a16207 100%)", glow: "rgba(202, 138, 4, 0.4)" },
-    marine: { accent: "#0369a1", gradient: "linear-gradient(135deg, #0284c7 0%, #0c4a6e 100%)", glow: "rgba(3, 105, 161, 0.4)" }
-  }), [])
-
   const [activeIndex, setActiveIndex] = useState(0)
-  const activeTheme = isItalianHome ? (theme[sectors[activeIndex]?.key] || DEFAULT_THEME) : DEFAULT_THEME
 
   const slideDuration = reduceMotion ? 0.2 : 0.4
   const cooldownMs = reduceMotion ? COOLDOWN_REDUCED_MS : COOLDOWN_MS
@@ -280,151 +269,7 @@ const SectorsScrollStory = () => {
     return () => window.removeEventListener("keydown", onKeyDown)
   }, [isLocked])
 
-  /* Scroll logic unchanged. Below: visuals only. */
-
-  if (isItalianHome) {
-    return (
-      <section
-        ref={sectionRef}
-        id="sectors-bar"
-        aria-labelledby="sectors-scroll-story-title"
-        className="relative flex items-center justify-center"
-        style={{
-          minHeight: "100vh",
-          paddingTop: HEADER_OFFSET,
-          paddingBottom: "2rem",
-          boxSizing: "border-box",
-          background: "#ffffff"
-        }}
-      >
-        <p className="sr-only">{t(`${NS}.srDescription`)}</p>
-        <div
-          className="w-full flex items-center justify-center overflow-hidden"
-          style={{ minHeight: "calc(100vh - 90px - 2rem)" }}
-        >
-          <div className="relative" style={{ width: "min(1100px, 92vw)" }}>
-            <div
-              className="relative overflow-hidden"
-              style={{
-                width: "100%",
-                minHeight: "min(560px, 70vh)",
-                maxHeight: "min(560px, 70vh)",
-                display: "flex",
-                flexDirection: "column",
-                padding: "clamp(24px, 4vw, 48px)",
-                background: "rgba(255, 255, 255, 0.55)",
-                backdropFilter: "blur(18px) saturate(140%)",
-                WebkitBackdropFilter: "blur(18px) saturate(140%)",
-                border: "1px solid rgba(255, 255, 255, 0.4)",
-                borderLeft: "4px solid rgb(40,80,158)",
-                borderRadius: 20,
-                boxShadow: "0 20px 50px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.6)"
-              }}
-            >
-              <div className="glass-overlay" aria-hidden="true" />
-              <header className="flex-shrink-0 mb-4 w-full" role="presentation" aria-hidden="true">
-                <div
-                  className="w-full mb-2"
-                  style={{ height: 4, background: "#e5e7eb", borderRadius: 2, overflow: "hidden" }}
-                >
-                  <div
-                    style={{
-                      width: `${lastIndex > 0 ? (100 * activeIndex) / lastIndex : 0}%`,
-                      height: "100%",
-                      background: "rgb(40,80,158)",
-                      borderRadius: 2,
-                      transition: "width 0.35s ease-out"
-                    }}
-                  />
-                </div>
-                <div className="flex justify-between items-center text-[#1b3155]/80 text-sm font-[Rajdhani] font-[600]">
-                  <span>
-                    {String(activeIndex + 1).padStart(2, "0")}/{String(lastIndex + 1).padStart(2, "0")}
-                  </span>
-                  <span className="sr-only">{t(`${NS}.scrollHint`)}</span>
-                </div>
-              </header>
-              <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left justify-center min-h-0 relative">
-                {sectors.map((sector, idx) => {
-                  const isActive = idx === activeIndex
-                  return (
-                    <motion.div
-                      key={sector.key}
-                      className="absolute inset-0 flex flex-col items-center lg:items-start justify-center px-4 pt-2 pb-4 lg:pl-0"
-                      initial={false}
-                      animate={{
-                        opacity: isActive ? 1 : 0,
-                        scale: reduceMotion ? 1 : isActive ? 1 : 0.98,
-                        y: reduceMotion ? 0 : isActive ? 0 : 12,
-                        filter: reduceMotion ? "none" : isActive ? "blur(0px)" : "blur(4px)",
-                        pointerEvents: isActive ? "auto" : "none"
-                      }}
-                      transition={slideTransition}
-                      onAnimationComplete={isActive ? onSlideAnimationComplete : undefined}
-                      aria-hidden={!isActive}
-                    >
-                      <div className="flex flex-col items-center lg:items-start max-w-md relative z-10">
-                        {(() => {
-                          const slideTheme = theme[sector.key] || DEFAULT_THEME
-                          return (
-                            <>
-                              <div
-                                style={{
-                                  width: 88,
-                                  height: 88,
-                                  borderRadius: 20,
-                                  display: "flex",
-                                  alignItems: "center",
-                                  justifyContent: "center",
-                                  flexShrink: 0,
-                                  aspectRatio: "1 / 1",
-                                  background: "#f1f5f9",
-                                  border: "1px solid #e2e8f0",
-                                  boxShadow: "0 6px 18px rgba(0,0,0,0.05)",
-                                  marginBottom: "1rem"
-                                }}
-                              >
-                                <i
-                                  className={`fa-solid ${sector.icon || "fa-building"} text-[#1b3155]`}
-                                  style={{ fontSize: 36, lineHeight: 1 }}
-                                  aria-hidden="true"
-                                />
-                              </div>
-                              <h2
-                                id={idx === 0 ? "sectors-scroll-story-title" : undefined}
-                                className="font-[Rajdhani] text-[22px] md:text-[28px] lg:text-[32px] font-[700] uppercase leading-tight mb-2"
-                                style={{ background: slideTheme.gradient, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}
-                              >
-                                {t(`${NS}.items.${sector.key}.title`)}
-                              </h2>
-                              {t(`sectors.subtitles.${sector.key}`) && t(`sectors.subtitles.${sector.key}`) !== `sectors.subtitles.${sector.key}` && (
-                                <span className="inline-block text-xs font-[Rajdhani] font-[500] text-[#1b3155]/70 mb-4 px-3 py-1 rounded-full bg-[#1b3155]/8">
-                                  {t(`sectors.subtitles.${sector.key}`)}
-                                </span>
-                              )}
-                              <SmartLink
-                                to="/sectors"
-                                className="inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 font-[Rajdhani] text-base md:text-lg font-[600] uppercase text-white whitespace-nowrap shadow-md transition-all duration-200 hover:bg-[#1f3f7a] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[rgb(40,80,158)]"
-                                style={{ background: "rgb(40,80,158)", letterSpacing: "0.5px" }}
-                                aria-label={t(`${NS}.items.${sector.key}.ariaLabel`, { title: t(`${NS}.items.${sector.key}.title`) })}
-                              >
-                                {t("nav.sectors")}
-                                <i className="fa-solid fa-arrow-right text-sm" aria-hidden="true" />
-                              </SmartLink>
-                            </>
-                          )
-                        })()}
-                      </div>
-                    </motion.div>
-                  )
-                })}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    )
-  }
+  /* Scroll logic unchanged. Below: single design for all locales (Italian-style). */
 
   return (
     <section
@@ -437,7 +282,7 @@ const SectorsScrollStory = () => {
         paddingTop: HEADER_OFFSET,
         paddingBottom: "2rem",
         boxSizing: "border-box",
-        background: "linear-gradient(165deg, #e8eef8 0%, #eef2f9 35%, #f0f4fa 70%, #e6ecf5 100%)"
+        background: "#ffffff"
       }}
     >
       <p className="sr-only">{t(`${NS}.srDescription`)}</p>
@@ -445,69 +290,114 @@ const SectorsScrollStory = () => {
         className="w-full flex items-center justify-center overflow-hidden"
         style={{ minHeight: "calc(100vh - 90px - 2rem)" }}
       >
-        <div
-          className="relative"
-          style={{
-            width: "min(1100px, 92vw)",
-            minHeight: "min(560px, 70vh)",
-            maxHeight: "min(560px, 70vh)",
-            background: "#ffffff",
-            boxShadow: "0 8px 32px rgba(40, 80, 158, 0.12), 0 0 0 1px rgba(40, 80, 158, 0.08)",
-            borderLeft: "4px solid rgb(40, 80, 158)",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: "clamp(24px, 4vw, 48px)"
-          }}
-        >
-          <div className="absolute top-4 left-1/2 -translate-x-1/2 z-10 flex gap-2" role="presentation" aria-hidden="true">
-            {sectors.map((_, i) => (
-              <span
-                key={i}
-                className={`h-2 w-2 rounded-full transition-all duration-300 ${i === activeIndex ? "bg-[rgb(40,80,158)] scale-125" : "bg-[rgb(40,80,158)]/25"}`}
-              />
-            ))}
-          </div>
-          {sectors.map((sector, idx) => {
-            const isActive = idx === activeIndex
-            return (
-              <motion.div
-                key={sector.key}
-                className="absolute inset-0 flex flex-col items-center justify-center px-6 pt-12 pb-6"
-                initial={false}
-                animate={{
-                  opacity: isActive ? 1 : 0,
-                  y: reduceMotion ? 0 : isActive ? 0 : 16,
-                  pointerEvents: isActive ? "auto" : "none"
-                }}
-                transition={slideTransition}
-                onAnimationComplete={isActive ? onSlideAnimationComplete : undefined}
-                aria-hidden={!isActive}
+        <div className="relative" style={{ width: "min(1100px, 92vw)" }}>
+          <div
+            className="relative overflow-hidden"
+            style={{
+              width: "100%",
+              minHeight: "min(560px, 70vh)",
+              maxHeight: "min(560px, 70vh)",
+              display: "flex",
+              flexDirection: "column",
+              padding: "clamp(24px, 4vw, 48px)",
+              background: "#ffffff",
+              border: "1px solid #e5e7eb",
+              borderLeft: `4px solid ${NAVBAR_BLUE}`,
+              borderRadius: 20,
+              boxShadow: "0 20px 50px rgba(0, 0, 0, 0.08)"
+            }}
+          >
+            <header className="flex-shrink-0 mb-4 w-full" role="presentation" aria-hidden="true">
+              <div
+                className="w-full mb-2"
+                style={{ height: 4, background: "#e5e7eb", borderRadius: 2, overflow: "hidden" }}
               >
-                <div className="flex flex-col items-center justify-center text-center max-w-md relative z-10">
-                  <div className="mb-5 w-[64px] h-[64px] md:w-[72px] md:h-[72px] flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "rgb(40, 80, 158)" }}>
-                    <i className={`fa-solid ${sector.icon || "fa-building"} text-white text-[28px] md:text-[32px]`} aria-hidden="true" />
-                  </div>
-                  <h2
-                    id={idx === 0 ? "sectors-scroll-story-title" : undefined}
-                    className="font-[Rajdhani] text-[#1b3155] text-[24px] md:text-[32px] lg:text-[38px] font-[700] uppercase leading-tight mb-5"
+                <div
+                  style={{
+                    width: `${lastIndex > 0 ? (100 * activeIndex) / lastIndex : 0}%`,
+                    height: "100%",
+                    background: NAVBAR_BLUE,
+                    borderRadius: 2,
+                    transition: "width 0.35s ease-out"
+                  }}
+                />
+              </div>
+              <div className="flex justify-between items-center text-[#1b3155]/80 text-sm font-[Rajdhani] font-[600]">
+                <span>
+                  {String(activeIndex + 1).padStart(2, "0")}/{String(lastIndex + 1).padStart(2, "0")}
+                </span>
+                <span className="sr-only">{t(`${NS}.scrollHint`)}</span>
+              </div>
+            </header>
+            <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left justify-center min-h-0 relative">
+              {sectors.map((sector, idx) => {
+                const isActive = idx === activeIndex
+                return (
+                  <motion.div
+                    key={sector.key}
+                    className="absolute inset-0 flex flex-col items-center lg:items-start justify-center px-4 pt-2 pb-4 lg:pl-0"
+                    initial={false}
+                    animate={{
+                      opacity: isActive ? 1 : 0,
+                      scale: reduceMotion ? 1 : isActive ? 1 : 0.98,
+                      y: reduceMotion ? 0 : isActive ? 0 : 12,
+                      filter: reduceMotion ? "none" : isActive ? "blur(0px)" : "blur(4px)",
+                      pointerEvents: isActive ? "auto" : "none"
+                    }}
+                    transition={slideTransition}
+                    onAnimationComplete={isActive ? onSlideAnimationComplete : undefined}
+                    aria-hidden={!isActive}
                   >
-                    {t(`${NS}.items.${sector.key}.title`)}
-                  </h2>
-                  <SmartLink
-                    to="/sectors"
-                    className="inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 font-[Rajdhani] text-[16px] md:text-[18px] font-[600] uppercase text-white whitespace-nowrap shadow-md transition-all duration-200 hover:bg-[#1f3f7a] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[rgb(40,80,158)]"
-                    style={{ background: "rgb(40,80,158)", letterSpacing: "0.5px" }}
-                    aria-label={t(`${NS}.items.${sector.key}.ariaLabel`, { title: t(`${NS}.items.${sector.key}.title`) })}
-                  >
-                    {t("nav.sectors")}
-                    <i className="fa-solid fa-arrow-right text-sm" aria-hidden="true" />
-                  </SmartLink>
-                </div>
-              </motion.div>
-            )
-          })}
+                    <div className="flex flex-col items-center lg:items-start max-w-md relative z-10">
+                      <div
+                        style={{
+                          width: 88,
+                          height: 88,
+                          borderRadius: 20,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          flexShrink: 0,
+                          aspectRatio: "1 / 1",
+                          background: "#f1f5f9",
+                          border: "1px solid #e2e8f0",
+                          boxShadow: "0 6px 18px rgba(0,0,0,0.05)",
+                          marginBottom: "1rem"
+                        }}
+                      >
+                        <i
+                          className={`fa-solid ${sector.icon || "fa-building"}`}
+                          style={{ fontSize: 36, lineHeight: 1, color: NAVBAR_BLUE_DARK }}
+                          aria-hidden="true"
+                        />
+                      </div>
+                      <h2
+                        id={idx === 0 ? "sectors-scroll-story-title" : undefined}
+                        className="font-[Rajdhani] text-[22px] md:text-[28px] lg:text-[32px] font-[700] uppercase leading-tight mb-2"
+                        style={{ color: NAVBAR_BLUE_DARK }}
+                      >
+                        {t(`${NS}.items.${sector.key}.title`)}
+                      </h2>
+                      {t(`sectors.subtitles.${sector.key}`) && t(`sectors.subtitles.${sector.key}`) !== `sectors.subtitles.${sector.key}` && (
+                        <span className="inline-block text-xs font-[Rajdhani] font-[500] mb-4 px-3 py-1 rounded-full" style={{ color: `${NAVBAR_BLUE_DARK}b3`, backgroundColor: `${NAVBAR_BLUE_DARK}14` }}>
+                          {t(`sectors.subtitles.${sector.key}`)}
+                        </span>
+                      )}
+                      <SmartLink
+                        to="/sectors"
+                        className="inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 font-[Rajdhani] text-base md:text-lg font-[600] uppercase text-white whitespace-nowrap shadow-md transition-all duration-200 hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[rgb(40,80,158)]"
+                        style={{ background: NAVBAR_BLUE, letterSpacing: "0.5px" }}
+                        aria-label={t(`${NS}.items.${sector.key}.ariaLabel`, { title: t(`${NS}.items.${sector.key}.title`) })}
+                      >
+                        {t("nav.sectors")}
+                        <i className="fa-solid fa-arrow-right text-sm" aria-hidden="true" />
+                      </SmartLink>
+                    </div>
+                  </motion.div>
+                )
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </section>

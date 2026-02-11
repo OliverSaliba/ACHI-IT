@@ -9,7 +9,21 @@ import { buildPathWithLang } from "../../utils/langRouting"
 
 const LEBANON_SERVICE_KEYS = ["facades", "suspended", "proppingShoring", "adjustableProps", "highCapacity", "eventScaffolding"]
 
-const ITALIAN_SERVICE_KEYS = ["manodopera", "noleggioCaldo", "sospesi"]
+const ITALIAN_SERVICE_KEYS = [
+  "manodopera",
+  "ponteggiSospesi",
+  "noleggioCaldo",
+  "noleggioFreddo",
+  "ponteggiFacciate",
+  "ponteggiPonte",
+  "impalcatureEventi",
+  "coperturaSottotetto",
+  "costruzioniSpeciali",
+  "sicurezzaLavoro",
+  "multidirezionali",
+  "tradizionaliTelai",
+  "tubiGiunti",
+]
 
 const SERVICES_LEBANON = [
   { key: "facades", imgWebp: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png", img: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png" },
@@ -22,8 +36,18 @@ const SERVICES_LEBANON = [
 
 const SERVICES_ITALY = [
   { key: "manodopera", imgWebp: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png", img: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png" },
+  { key: "ponteggiSospesi", imgWebp: "/assets/services/Suspended scaffolding 1 2(1).png", img: "/assets/services/Suspended scaffolding 1 2(1).png" },
   { key: "noleggioCaldo", imgWebp: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png", img: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png" },
-  { key: "sospesi", imgWebp: "/assets/services/Suspended scaffolding 1 2(1).png", img: "/assets/services/Suspended scaffolding 1 2(1).png" }
+  { key: "noleggioFreddo", imgWebp: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png", img: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png" },
+  { key: "ponteggiFacciate", imgWebp: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png", img: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png" },
+  { key: "ponteggiPonte", imgWebp: "/assets/services/Suspended scaffolding 1 2(1).png", img: "/assets/services/Suspended scaffolding 1 2(1).png" },
+  { key: "impalcatureEventi", imgWebp: "/assets/services/eventScaffolding.jpeg", img: "/assets/services/eventScaffolding.jpeg" },
+  { key: "coperturaSottotetto", imgWebp: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png", img: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png" },
+  { key: "costruzioniSpeciali", imgWebp: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png", img: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png" },
+  { key: "sicurezzaLavoro", imgWebp: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png", img: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png" },
+  { key: "multidirezionali", imgWebp: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png", img: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png" },
+  { key: "tradizionaliTelai", imgWebp: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png", img: "/assets/services/361641065_768035905323121_6701313797518833287_n 2(2).png" },
+  { key: "tubiGiunti", imgWebp: "/assets/services/20819369_135108873765021_8187137705964148355_o (1) 2(1).png", img: "/assets/services/20819369_135108873765021_8187137705964148355_o (1) 2(1).png" },
 ]
 
 const LEBANON_KEY_TO_SLUG = {
@@ -36,9 +60,19 @@ const LEBANON_KEY_TO_SLUG = {
 }
 
 const ITALIAN_KEY_TO_SLUG = {
-  manodopera: "manodopera-specializzata",
-  noleggioCaldo: "noleggio-a-caldo",
-  sospesi: "ponteggi-sospesi"
+  manodopera: "manodopera-specializzata-ponteggi-italia",
+  ponteggiSospesi: "ponteggi-sospesi-italia",
+  noleggioCaldo: "noleggio-a-caldo-ponteggi-italia",
+  noleggioFreddo: "noleggio-a-freddo-ponteggi-italia",
+  ponteggiFacciate: "ponteggi-per-facciate-italia",
+  ponteggiPonte: "ponteggi-per-ponte-italia",
+  impalcatureEventi: "impalcature-per-eventi-italia",
+  coperturaSottotetto: "copertura-provvisoria-sottotetto-italia",
+  costruzioniSpeciali: "ponteggi-per-costruzioni-speciali-italia",
+  sicurezzaLavoro: "sicurezza-sul-lavoro-ponteggi-italia",
+  multidirezionali: "ponteggi-multidirezionali-italia",
+  tradizionaliTelai: "ponteggi-tradizionali-telai-prefabbricati-italia",
+  tubiGiunti: "ponteggi-tubi-e-giunti-italia",
 }
 
 const ServicesPageAllServices = () => {
