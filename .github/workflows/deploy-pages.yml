@@ -41,6 +41,9 @@ jobs:
         env:
           CI: false
 
+      - name: Add .nojekyll
+        run: touch Frontend/build/.nojekyll
+
       - name: Upload artifact (CRA build)
         uses: actions/upload-pages-artifact@v3
         with:
