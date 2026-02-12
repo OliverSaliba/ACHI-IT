@@ -103,9 +103,9 @@ const normalizeToPublicUrl = (raw) => {
   if (!v.startsWith('/') && !v.includes('/')) v = `/assets/${v}`;
   if (!v.startsWith('/')) v = `/${v}`;
 
-  // Return relative path (./assets/...) so it resolves with <base href> on GitHub Pages
-  const relative = v.startsWith('/') ? v.slice(1) : v;
-  return relative ? `./${relative}` : '.';
+  const base = process.env.PUBLIC_URL || '';
+  if (base && v.startsWith(base + '/')) return v;
+  return `${base}${v}`;
 };
 
 const nextFallbackSrc = (current) => {
