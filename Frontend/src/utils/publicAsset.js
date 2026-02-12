@@ -1,10 +1,11 @@
 /**
- * Returns the full URL for a public folder asset (works on GitHub Pages subpath).
+ * Returns a relative path for public folder assets (works with <base href> on GitHub Pages).
+ * Use ./ so paths resolve relative to the app root (set by <base> in index.html).
  * @param {string} path - Path like "/assets/logo.png" or "assets/logo.png"
- * @returns {string} - e.g. "/ACHI-IT/frontend/assets/logo.png" in production, "/assets/logo.png" in dev
+ * @returns {string} - e.g. "./assets/logo.png" (resolved against base = PUBLIC_URL)
  */
 export function publicAsset(path) {
-  const base = process.env.PUBLIC_URL || "";
-  const normalized = path && path.startsWith("/") ? path : `/${path || ""}`;
-  return `${base}${normalized}`;
+  const p = (path || "").trim();
+  const withoutLeadingSlash = p.startsWith("/") ? p.slice(1) : p;
+  return withoutLeadingSlash ? `./${withoutLeadingSlash}` : ".";
 }

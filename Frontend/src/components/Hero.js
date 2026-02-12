@@ -2,8 +2,9 @@ import React from "react"
 import { motion } from "framer-motion"
 import { useTranslation } from "react-i18next"
 import { useLangRouter } from "../routing/LangRouter"
+import { publicAsset } from "../utils/publicAsset"
+
 const HERO_VIDEO_ITALY = "WhatsApp Video 2026-02-04 at 2.53.05 PM.mp4"
-const publicUrl = process.env.PUBLIC_URL || ""
 
 const Hero = ({ showMenu, setshowMenu, direction, userLang }) => {
   const { t } = useTranslation()
@@ -17,7 +18,7 @@ const Hero = ({ showMenu, setshowMenu, direction, userLang }) => {
   const ctaLabel = heroCta === "home.hero.ctaSupport" ? t("banner1.button") : heroCta
 
   const isItalian = urlLang === "it"
-  const videoSrc = `${publicUrl}/assets/${encodeURIComponent(HERO_VIDEO_ITALY)}`
+  const videoSrc = publicAsset(`/assets/${encodeURIComponent(HERO_VIDEO_ITALY)}`)
 
   const panelBase =
     "flex flex-col ltr:ml-[20px] rtl:mr-[20px] max-w-[650px] sm:max-w-[720px] ltr:2xl:ml-[100px] ltr:xl:ml-[80px] ltr:lg:ml-[60px] ltr:md:ml-[40px] ltr:sm:ml-[20px] rtl:2xl:mr-[100px] rtl:xl:mr-[80px] rtl:lg:mr-[60px] rtl:md:mr-[40px] rtl:sm:mr-[20px] heroPanel"
@@ -44,7 +45,7 @@ const Hero = ({ showMenu, setshowMenu, direction, userLang }) => {
         ) : (
           <div
             className="absolute inset-0 bg-no-repeat bg-cover bg-center"
-            style={{ backgroundImage: `url(${publicUrl}/assets/firstBgSlide2_lossyalpha.webp)` }}
+            style={{ backgroundImage: `url(${publicAsset("/assets/firstBgSlide2_lossyalpha.webp")})` }}
             aria-hidden="true"
           />
         )}

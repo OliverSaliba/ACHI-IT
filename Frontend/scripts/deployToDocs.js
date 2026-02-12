@@ -1,7 +1,6 @@
 /**
- * Copies Frontend/build to repo docs/frontend/ for GitHub Pages (Deploy from branch -> /docs).
- * Assets are then at /ACHI-IT/frontend/assets/ so GitHub serves from repo root correctly.
- * Creates .nojekyll, root redirect, and 404 for SPA routing.
+ * Copies Frontend/build to repo root docs/ for GitHub Pages (Deploy from branch -> /docs).
+ * Creates .nojekyll and 404.html for SPA routing.
  * Run from Frontend/ after: npm run build
  */
 
@@ -11,7 +10,6 @@ const path = require("path");
 const frontendDir = path.resolve(__dirname, "..");
 const buildDir = path.join(frontendDir, "build");
 const docsDir = path.resolve(frontendDir, "..", "docs");
-const frontendDestDir = path.join(docsDir, "frontend");
 
 function rimraf(dir) {
   if (!fs.existsSync(dir)) return;
@@ -43,29 +41,25 @@ if (!fs.existsSync(buildDir)) {
   process.exit(1);
 }
 
-console.log("Deploying build to repo docs/frontend...");
+console.log("Deploying build to repo /docs...");
 
-fs.mkdirSync(docsDir, { recursive: true });
-if (fs.existsSync(frontendDestDir)) {
-  rimraf(frontendDestDir);
+if (fs.existsSync(docsDir)) {
+  rimraf(docsDir);
 }
-fs.mkdirSync(frontendDestDir, { recursive: true });
+fs.mkdirSync(docsDir, { recursive: true });
 
-copyRecursive(buildDir, frontendDestDir);
+copyRecursive(buildDir, docsDir);
 
 fs.writeFileSync(path.join(docsDir, ".nojekyll"), "", "utf8");
 
-// Root redirect: visiting /ACHI-IT/ goes to the app at /ACHI-IT/frontend/
-const rootIndex = `<!DOCTYPE html>
-<html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=/ACHI-IT/frontend/"><script>location.replace("/ACHI-IT/frontend/" + (location.search || "") + (location.hash || ""));</script></head><body><p>Redirecting to <a href="/ACHI-IT/frontend/">app</a>...</p></body></html>
-`;
-fs.writeFileSync(path.join(docsDir, "index.html"), rootIndex, "utf8");
-console.log("Created docs/index.html redirect to /ACHI-IT/frontend/");
-
 const notFoundHtml = path.join(buildDir, "404.html");
+const indexHtml = path.join(buildDir, "index.html");
 if (fs.existsSync(notFoundHtml)) {
-  fs.copyFileSync(notFoundHtml, path.join(frontendDestDir, "404.html"));
-  console.log("Copied build/404.html to docs/frontend/404.html (SPA redirect).");
+  fs.copyFileSync(notFoundHtml, path.join(docsDir, "404.html"));
+  console.log("Copied build/404.html to docs/404.html (SPA redirect).");
+} else if (fs.existsSync(indexHtml)) {
+  fs.copyFileSync(indexHtml, path.join(docsDir, "404.html"));
+  console.log("Created docs/404.html from index.html for SPA fallback.");
 }
 
-console.log("Done. docs/ and docs/frontend/ are ready. Commit and push, then set Pages -> Source: Deploy from branch -> main -> /docs");
+console.log("Done. docs/ is ready. Commit and push, then set Pages -> Source: Deploy from branch -> main -> /docs");

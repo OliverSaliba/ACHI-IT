@@ -18,6 +18,7 @@ import AeoIntroBlock from "../components/AeoIntroBlock"
 import AeoFaqSection from "../components/AeoFaqSection"
 import AeoJsonLd from "../components/AeoJsonLd"
 import { useTranslation } from "react-i18next"
+import { publicAsset } from "../utils/publicAsset"
 import styles from "./Home.module.css"
 
 const sectionReveal = {
@@ -31,7 +32,6 @@ const Home = ({ showMenu, setshowMenu, direction, userLang }) => {
   const { t, i18n } = useTranslation()
   const lang = String(i18n.resolvedLanguage || i18n.language || "").toLowerCase()
   const useSevenCardsSectors = !/^it$/i.test(lang)
-  const ASSET = process.env.PUBLIC_URL || ""
   const baseUrl = "https://achiscaffolding.com"
   const [socialOpen, setSocialOpen] = useState(false)
 
@@ -217,7 +217,7 @@ const Home = ({ showMenu, setshowMenu, direction, userLang }) => {
                 className="glass-social-btn social-btn-mobile w-12 h-12 flex items-center justify-center"
                 aria-label="Facebook"
               >
-                <span className="glass-social-icon-blue" style={{ "--icon-url": `url(${ASSET}/assets/iconoir_facebook.svg)` }} aria-hidden="true" />
+                <span className="glass-social-icon-blue" style={{ "--icon-url": `url(${publicAsset("/assets/iconoir_facebook.svg")})` }} aria-hidden="true" />
               </a>
               <a
                 href="https://www.instagram.com/achiscaffoldinglb"
@@ -226,7 +226,7 @@ const Home = ({ showMenu, setshowMenu, direction, userLang }) => {
                 className="glass-social-btn social-btn-mobile w-12 h-12 flex items-center justify-center"
                 aria-label="Instagram"
               >
-                <span className="glass-social-icon-blue" style={{ "--icon-url": `url(${ASSET}/assets/mdi_instagram.svg)` }} aria-hidden="true" />
+                <span className="glass-social-icon-blue" style={{ "--icon-url": `url(${publicAsset("/assets/mdi_instagram.svg")})` }} aria-hidden="true" />
               </a>
               <a
                 href="https://twitter.com/AchiScaffolding"
@@ -235,7 +235,7 @@ const Home = ({ showMenu, setshowMenu, direction, userLang }) => {
                 className="glass-social-btn social-btn-mobile w-12 h-12 flex items-center justify-center"
                 aria-label="X (Twitter)"
               >
-                <span className="glass-social-icon-blue" style={{ "--icon-url": `url(${ASSET}/assets/ri_twitter-x-fill.svg)` }} aria-hidden="true" />
+                <span className="glass-social-icon-blue" style={{ "--icon-url": `url(${publicAsset("/assets/ri_twitter-x-fill.svg")})` }} aria-hidden="true" />
               </a>
               <a
                 href="https://www.linkedin.com/company/achi-scaffolding/"
@@ -244,7 +244,7 @@ const Home = ({ showMenu, setshowMenu, direction, userLang }) => {
                 className="glass-social-btn social-btn-mobile w-12 h-12 flex items-center justify-center"
                 aria-label="LinkedIn"
               >
-                <span className="glass-social-icon-blue" style={{ "--icon-url": `url(${ASSET}/assets/basil_linkedin-outline.svg)` }} aria-hidden="true" />
+                <span className="glass-social-icon-blue" style={{ "--icon-url": `url(${publicAsset("/assets/basil_linkedin-outline.svg")})` }} aria-hidden="true" />
               </a>
               <a
                 href="https://www.tiktok.com/@achiscaffolding"
@@ -253,7 +253,7 @@ const Home = ({ showMenu, setshowMenu, direction, userLang }) => {
                 className="glass-social-btn social-btn-mobile w-12 h-12 flex items-center justify-center"
                 aria-label="TikTok"
               >
-                <span className="glass-social-icon-blue" style={{ "--icon-url": `url(${ASSET}/assets/ph_tiktok-logo.svg)` }} aria-hidden="true" />
+                <span className="glass-social-icon-blue" style={{ "--icon-url": `url(${publicAsset("/assets/ph_tiktok-logo.svg")})` }} aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -280,7 +280,7 @@ const Home = ({ showMenu, setshowMenu, direction, userLang }) => {
             className="glass-social-btn w-[52px] h-[52px]"
             aria-label="Facebook"
           >
-            <span className="glass-social-icon-blue" style={{ "--icon-url": `url(${ASSET}/assets/iconoir_facebook.svg)` }} aria-hidden="true" />
+            <span className="glass-social-icon-blue" style={{ "--icon-url": `url(${publicAsset("/assets/iconoir_facebook.svg")})` }} aria-hidden="true" />
           </a>
           <a
             href="https://www.instagram.com/achiscaffoldinglb"
@@ -289,7 +289,7 @@ const Home = ({ showMenu, setshowMenu, direction, userLang }) => {
             className="glass-social-btn w-[52px] h-[52px]"
             aria-label="Instagram"
           >
-            <span className="glass-social-icon-blue" style={{ "--icon-url": `url(${ASSET}/assets/mdi_instagram.svg)` }} aria-hidden="true" />
+            <span className="glass-social-icon-blue" style={{ "--icon-url": `url(${publicAsset("/assets/mdi_instagram.svg")})` }} aria-hidden="true" />
           </a>
           <a
             href="https://twitter.com/AchiScaffolding"
@@ -298,7 +298,7 @@ const Home = ({ showMenu, setshowMenu, direction, userLang }) => {
             className="glass-social-btn w-[52px] h-[52px]"
             aria-label="X (Twitter)"
           >
-            <span className="glass-social-icon-blue" style={{ "--icon-url": `url(${ASSET}/assets/ri_twitter-x-fill.svg)` }} aria-hidden="true" />
+            <span className="glass-social-icon-blue" style={{ "--icon-url": `url(${publicAsset("/assets/ri_twitter-x-fill.svg")})` }} aria-hidden="true" />
           </a>
           <a
             href="https://www.linkedin.com/company/achi-scaffolding/"
@@ -307,7 +307,7 @@ const Home = ({ showMenu, setshowMenu, direction, userLang }) => {
             className="glass-social-btn w-[52px] h-[52px]"
             aria-label="LinkedIn"
           >
-            <span className="glass-social-icon-blue" style={{ "--icon-url": `url(${ASSET}/assets/basil_linkedin-outline.svg)` }} aria-hidden="true" />
+            <span className="glass-social-icon-blue" style={{ "--icon-url": `url(${publicAsset("/assets/basil_linkedin-outline.svg")})` }} aria-hidden="true" />
           </a>
           <a
             href="https://www.tiktok.com/@achiscaffolding"
@@ -316,7 +316,7 @@ const Home = ({ showMenu, setshowMenu, direction, userLang }) => {
             className="glass-social-btn w-[52px] h-[52px]"
             aria-label="TikTok"
           >
-            <span className="glass-social-icon-blue" style={{ "--icon-url": `url(${ASSET}/assets/ph_tiktok-logo.svg)` }} aria-hidden="true" />
+            <span className="glass-social-icon-blue" style={{ "--icon-url": `url(${publicAsset("/assets/ph_tiktok-logo.svg")})` }} aria-hidden="true" />
           </a>
         </div>
 
@@ -361,7 +361,7 @@ const Home = ({ showMenu, setshowMenu, direction, userLang }) => {
             })
           }}
         >
-          <img className="w-7 h-7 md:w-[24px] md:h-[24px]" src={`${ASSET}/assets/logos_whatsapp-icon.png`} alt={t("home.floating.whatsappAlt")} />
+          <img className="w-7 h-7 md:w-[24px] md:h-[24px]" src={publicAsset("/assets/logos_whatsapp-icon.png")} alt={t("home.floating.whatsappAlt")} />
         </a>
       </div>
 
