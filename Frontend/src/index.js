@@ -13,7 +13,7 @@ const container = document.getElementById("root");
 
 createRoot(container).render(
   <HelmetProvider>
-    <BrowserRouter basename={process.env.PUBLIC_URL || "/ACHI-IT"}>
+    <BrowserRouter basename={process.env.PUBLIC_URL || "/ACHI-IT/frontend"}>
       <App />
     </BrowserRouter>
   </HelmetProvider>

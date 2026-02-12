@@ -9,7 +9,6 @@ import CountryWeather from "./CountryWeather"
 import { useLangRouter } from "../routing/LangRouter"
 import { buildPathWithLang, stripLocalePrefix, getLogicalPathFromLocalizedPath } from "../utils/langRouting"
 import { ITALY_ENABLED } from "../utils/featureFlags"
-import { publicAsset } from "../utils/publicAsset"
 
 function Header({ handleLanguage, currentLanguage, handleCountry, currentCountry = "Country", onHeightChange }) {
   const navigate = useNavigate()
@@ -180,27 +179,27 @@ function Header({ handleLanguage, currentLanguage, handleCountry, currentCountry
         >
           <div className="flex items-center">
             <Link to={homePath} className="hidden md:block" onClick={() => { closeAllDropdowns(); setOpen(false) }}>
-              <ImageWebp srcWebp={publicAsset("/assets/ArchiScaffoldinglogo_lossyalpha.webp")} src={publicAsset("/assets/ArchiScaffoldinglogo_lossyalpha.webp")} alt="siteLogo" className="2xl:w-[150px] w-[100px]" />
+              <ImageWebp srcWebp={`${process.env.PUBLIC_URL || ''}/assets/ArchiScaffoldinglogo_lossyalpha.webp`} src={`${process.env.PUBLIC_URL || ''}/assets/ArchiScaffoldinglogo_lossyalpha.webp`} alt="siteLogo" className="2xl:w-[150px] w-[100px]" />
             </Link>
           </div>
 
           <div className="flex flex-row items-center gap-[20px] md:gap-[20px] lg:gap-[20px] xl:gap-[20px] flex-nowrap">
             <div className="inline-flex items-center gap-[8px]">
-              <ImageWebp srcWebp={publicAsset("/assets/emailIcon_lossyalpha.webp")} src={publicAsset("/assets/emailIcon_lossyalpha.webp")} className="w-[20px] h-[20px] flex-shrink-0" alt="emailIcon" />
+              <ImageWebp srcWebp={`${process.env.PUBLIC_URL || ''}/assets/emailIcon_lossyalpha.webp`} src={`${process.env.PUBLIC_URL || ''}/assets/emailIcon_lossyalpha.webp`} className="w-[20px] h-[20px] flex-shrink-0" alt="emailIcon" />
               <span className="text-[14px] text-white font-[500] leading-[1] font-saira whitespace-nowrap inline-block">achi.gr@hotmail.com</span>
             </div>
 
             <div className="inline-flex items-center gap-[8px]">
-              <ImageWebp srcWebp={publicAsset("/assets/wpicon_lossyalpha.webp")} src={publicAsset("/assets/wpicon_lossyalpha.webp")} className="w-[20px] h-[20px] flex-shrink-0" alt="whatsappIcon" />
+              <ImageWebp srcWebp={`${process.env.PUBLIC_URL || ''}/assets/wpicon_lossyalpha.webp`} src={`${process.env.PUBLIC_URL || ''}/assets/wpicon_lossyalpha.webp`} className="w-[20px] h-[20px] flex-shrink-0" alt="whatsappIcon" />
               <span className="text-[14px] text-white font-[500] leading-[1] font-saira whitespace-nowrap inline-block" dir="ltr">+96103322811</span>
             </div>
 
             <div className="hidden xl:inline-flex items-center gap-[20px]">
-              <a className="cursor-pointer inline-flex items-center" href="https://facebook.com/ACHISCAFF" target="_blank" rel="noreferrer"><img src={publicAsset("/assets/iconoir_facebook.svg")} alt="Facebook" className="w-[20px] h-[20px]" /></a>
-              <a className="cursor-pointer inline-flex items-center" href="https://www.instagram.com/achiscaffoldinglb" target="_blank" rel="noreferrer"><img src={publicAsset("/assets/mdi_instagram.svg")} alt="Instagram" className="w-[20px] h-[20px]" /></a>
-              <a className="cursor-pointer inline-flex items-center" href="https://twitter.com/AchiScaffolding" target="_blank" rel="noreferrer"><img src={publicAsset("/assets/ri_twitter-x-fill.svg")} alt="X" className="w-[20px] h-[20px]" /></a>
-              <a className="cursor-pointer inline-flex items-center" href="https://www.linkedin.com/company/achi-scaffolding/" target="_blank" rel="noreferrer"><img src={publicAsset("/assets/basil_linkedin-outline.svg")} alt="LinkedIn" className="w-[20px] h-[20px]" /></a>
-              <a className="cursor-pointer inline-flex items-center" href="https://www.tiktok.com/@achiscaffolding" target="_blank" rel="noreferrer"><img src={publicAsset("/assets/ph_tiktok-logo.svg")} alt="TikTok" className="w-[20px] h-[20px]" /></a>
+              <a className="cursor-pointer inline-flex items-center" href="https://facebook.com/ACHISCAFF" target="_blank" rel="noreferrer"><img src={`${process.env.PUBLIC_URL || ''}/assets/iconoir_facebook.svg`} alt="Facebook" className="w-[20px] h-[20px]" /></a>
+              <a className="cursor-pointer inline-flex items-center" href="https://www.instagram.com/achiscaffoldinglb" target="_blank" rel="noreferrer"><img src={`${process.env.PUBLIC_URL || ''}/assets/mdi_instagram.svg`} alt="Instagram" className="w-[20px] h-[20px]" /></a>
+              <a className="cursor-pointer inline-flex items-center" href="https://twitter.com/AchiScaffolding" target="_blank" rel="noreferrer"><img src={`${process.env.PUBLIC_URL || ''}/assets/ri_twitter-x-fill.svg`} alt="X" className="w-[20px] h-[20px]" /></a>
+              <a className="cursor-pointer inline-flex items-center" href="https://www.linkedin.com/company/achi-scaffolding/" target="_blank" rel="noreferrer"><img src={`${process.env.PUBLIC_URL || ''}/assets/basil_linkedin-outline.svg`} alt="LinkedIn" className="w-[20px] h-[20px]" /></a>
+              <a className="cursor-pointer inline-flex items-center" href="https://www.tiktok.com/@achiscaffolding" target="_blank" rel="noreferrer"><img src={`${process.env.PUBLIC_URL || ''}/assets/ph_tiktok-logo.svg`} alt="TikTok" className="w-[20px] h-[20px]" /></a>
             </div>
           </div>
 
@@ -300,7 +299,7 @@ function Header({ handleLanguage, currentLanguage, handleCountry, currentCountry
         <div className="bg-[#28509E] flex md:hidden flex-row justify-between items-center pt-[8px] pb-[8px] sm:pr-[20px] border-b-[#FFFFFF]/70 border-b-[0.5px] border-solid">
           <div className="flex flex-row justify-between items-center w-[100%] px-[8px] sm:px-[0px] ltr:ml-[20px] rtl:mr-[20px]">
             <Link to={homePath} onClick={() => { closeAllDropdowns(); setOpen(false) }}>
-              <img className="w-[90px]" src={publicAsset("/assets/ArchiScaffoldinglogo.png")} alt="siteLogo" />
+              <img className="w-[90px]" src={`${process.env.PUBLIC_URL || ''}/assets/ArchiScaffoldinglogo.png`} alt="siteLogo" />
             </Link>
           </div>
 
@@ -315,7 +314,7 @@ function Header({ handleLanguage, currentLanguage, handleCountry, currentCountry
           <div className="flex justify-between items-center mb-[25px]">
             <div className="flex flex-row justify-between items-center w-[100%] px-[8px] sm:px-[0px]">
               <Link to={homePath} onClick={() => setOpen(false)}>
-                <ImageWebp srcWebp={publicAsset("/assets/ArchiScaffoldinglogo_lossyalpha.webp")} className="w-[90px]" src={publicAsset("/assets/ArchiScaffoldinglogo_lossyalpha.webp")} alt="siteLogo" />
+                <ImageWebp srcWebp={`${process.env.PUBLIC_URL || ''}/assets/ArchiScaffoldinglogo_lossyalpha.webp`} className="w-[90px]" src={`${process.env.PUBLIC_URL || ''}/assets/ArchiScaffoldinglogo_lossyalpha.webp`} alt="siteLogo" />
               </Link>
             </div>
             <div className="ltr:mr-5 rtl:ml-5">
