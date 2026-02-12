@@ -99,14 +99,24 @@ const ServiceSection = () => {
     },
   }
 
-  const cardVariants = {
-    hidden: reduceMotion
-      ? {}
-      : { opacity: 0, y: 24, scale: 0.96 },
-    show: reduceMotion
-      ? {}
-      : { opacity: 1, y: 0, scale: 1, transition: { duration: 0.4, ease: "easeOut" } },
-  }
+  // Italian grid: visible on first load (opacity 1). Non-Italian / reduced motion: animate in.
+  const cardVariants = useMemo(
+    () =>
+      isItalianGrid
+        ? {
+            hidden: { opacity: 1, y: 0, scale: 1 },
+            show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0 } },
+          }
+        : {
+            hidden: reduceMotion
+              ? {}
+              : { opacity: 0, y: 24, scale: 0.96 },
+            show: reduceMotion
+              ? {}
+              : { opacity: 1, y: 0, scale: 1, transition: { duration: 0.4, ease: "easeOut" } },
+          },
+    [isItalianGrid, reduceMotion]
+  )
 
   return (
     <section id="services" aria-labelledby="home-services-title">
@@ -126,13 +136,14 @@ const ServiceSection = () => {
       {isItalianGrid ? (
         <motion.div
           variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
+          initial="show"
+          animate="show"
           viewport={{ once: true, amount: 0.15 }}
+          style={{ opacity: 1 }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[20px] lg:gap-[24px] px-[20px] sm:px-[20px] lg:px-[50px] mb-[40px]"
         >
           {services.map((s) => (
-            <motion.div key={s.id} variants={cardVariants} className="h-full">
+            <motion.div key={s.id} variants={cardVariants} initial="show" animate="show" style={{ opacity: 1 }} className="h-full">
               <Link
                 to={buildPathWithLang(urlLang, s.slug)}
                 className="service-card-futuristic focus:outline-none focus-visible:ring-2 focus-visible:ring-[#28509E] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
@@ -158,8 +169,8 @@ const ServiceSection = () => {
         </motion.div>
       ) : (
         <motion.div
-          initial={{ opacity: 0, scale: reduceMotion ? 1 : 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={isItalian ? { opacity: 1, scale: 1 } : { opacity: 0, scale: reduceMotion ? 1 : 0.8 }}
+          whileInView={isItalian ? undefined : { opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 auto-rows-fr gap-[24px] justify-items-stretch lg:px-[50px] sm:px-[20px] px-[20px] mb-[40px]"
