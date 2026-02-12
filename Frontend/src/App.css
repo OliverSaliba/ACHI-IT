@@ -1397,6 +1397,192 @@ body.home-page div[id] {
   }
 }
 
+/* Apple-style liquid glass – Italian home service cards only */
+.service-card-liquid-glass {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  isolation: isolate;
+  cursor: pointer;
+
+  /* Liquid glass base: deep frosted translucency */
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+
+  /* Crisp edge – light refraction at glass border */
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 0 rgba(255, 255, 255, 0.08),
+    0 8px 32px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.32s ease,
+    background 0.32s ease,
+    border-color 0.32s ease;
+}
+
+.service-card-liquid-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(255, 255, 255, 0.04) 50%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 0.32s ease;
+}
+
+.service-card-liquid-glass:hover,
+.service-card-liquid-glass:focus-visible {
+  transform: translateY(-2px) scale(1.015);
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.42);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
+    0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+.service-card-liquid-glass:hover::before,
+.service-card-liquid-glass:focus-visible::before {
+  opacity: 1;
+  background: linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.22) 0%,
+    rgba(255, 255, 255, 0.06) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+}
+
+.service-card-liquid-glass::after {
+  content: none;
+}
+
+.service-card-liquid-glass .service-card-title {
+  color: #1b3155;
+  text-shadow: none;
+  transition: color 0.25s ease;
+}
+
+.service-card-liquid-glass:hover .service-card-title,
+.service-card-liquid-glass:focus-visible .service-card-title {
+  color: #1a2d4d;
+  text-shadow: none;
+}
+
+.service-card-liquid-glass .service-card-cta {
+  transition: gap 0.28s ease, transform 0.28s ease;
+}
+
+.service-card-liquid-glass:hover .service-card-cta svg,
+.service-card-liquid-glass:focus-visible .service-card-cta svg {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card-liquid-glass,
+  .service-card-liquid-glass::before {
+    transition: none;
+  }
+  .service-card-liquid-glass:hover,
+  .service-card-liquid-glass:focus-visible {
+    transform: none;
+  }
+}
+
+/* Italian home – liquid glass "View all" button */
+.service-cta-liquid-glass {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 16px;
+  overflow: hidden;
+  isolation: isolate;
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.45),
+    0 6px 24px rgba(40, 80, 158, 0.2);
+
+  color: #1b3155;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.28s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.28s ease,
+    background 0.28s ease,
+    border-color 0.28s ease,
+    color 0.28s ease;
+}
+
+.service-cta-liquid-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  pointer-events: none;
+  opacity: 1;
+}
+
+.service-cta-liquid-glass:hover {
+  transform: translateY(-2px) scale(1.02);
+  background: rgba(255, 255, 255, 0.28);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #1a2d4d;
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.55),
+    0 10px 32px rgba(40, 80, 158, 0.25);
+}
+
+.service-cta-liquid-glass:focus-visible {
+  outline: none;
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.45),
+    0 0 0 3px rgba(40, 80, 158, 0.4);
+}
+
+.service-cta-liquid-glass svg {
+  transition: transform 0.28s ease;
+}
+
+.service-cta-liquid-glass:hover svg {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-cta-liquid-glass,
+  .service-cta-liquid-glass::before {
+    transition: none;
+  }
+  .service-cta-liquid-glass:hover {
+    transform: none;
+  }
+}
+
 /* Services list (Italian homepage + Services page) */
 .services-page-list {
   list-style: none;

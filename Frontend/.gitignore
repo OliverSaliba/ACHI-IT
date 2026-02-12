@@ -37,6 +37,16 @@ yarn-error.log*
 # Ignore all assets by default
 /public/assets/*
 
+# Allow root-level assets (social icons, logos, hero, client arrows, etc.)
+!/public/assets/*.svg
+!/public/assets/*.png
+!/public/assets/*.jpg
+!/public/assets/*.jpeg
+!/public/assets/*.JPG
+!/public/assets/*.webp
+!/public/assets/*.mp4
+!/public/assets/*.gif
+
 # Allow gallery images
 !/public/assets/gallery/
 !/public/assets/gallery/**
@@ -45,5 +55,10 @@ yarn-error.log*
 !/public/assets/services/
 !/public/assets/services/**
 
+# Allow brand assets
 !/public/assets/brand/
 !/public/assets/brand/**
+
+# Allow workDone images (project details, service section)
+!/public/assets/workDone/
+!/public/assets/workDone/**

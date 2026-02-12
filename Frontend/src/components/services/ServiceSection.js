@@ -146,7 +146,7 @@ const ServiceSection = () => {
             <motion.div key={s.id} variants={cardVariants} initial="show" animate="show" style={{ opacity: 1 }} className="h-full">
               <Link
                 to={buildPathWithLang(urlLang, s.slug)}
-                className="service-card-futuristic focus:outline-none focus-visible:ring-2 focus-visible:ring-[#28509E] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                className="service-card-liquid-glass focus:outline-none focus-visible:ring-2 focus-visible:ring-[#28509E] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                 aria-labelledby={`service-title-${s.id}`}
               >
                 <div className="relative z-10 px-[20px] py-[22px] min-h-[120px] flex flex-col justify-between">
@@ -210,11 +210,15 @@ const ServiceSection = () => {
       <div className="w-full text-center mt-[-15px] md:mt-[20px] lg:mt-[30px] mb-[80px]">
         <Link
           to={buildPathWithLang(urlLang, "/services")}
-          className="group inline-flex items-center justify-center gap-[8px] text-small md:text-body text-white font-saira font-[700] px-[32px] py-[14px] bg-[#003A80] rounded-[8px] hover:bg-[#28509E] hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-[#28509E] focus-visible:ring-offset-2"
+          className={
+            isItalian
+              ? "service-cta-liquid-glass text-small md:text-body font-saira focus:outline-none"
+              : "group inline-flex items-center justify-center gap-[8px] text-small md:text-body text-white font-saira font-[700] px-[32px] py-[14px] bg-[#003A80] rounded-[8px] hover:bg-[#28509E] hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-[#28509E] focus-visible:ring-offset-2"
+          }
           aria-label={isItalian ? t("home.services.cardsCta") : t("homeServicesOverview.viewAll")}
         >
           {isItalian ? t("home.services.cardsCta") : t("homeServicesOverview.viewAll")}
-          <svg className="w-[16px] h-[16px] transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-[16px] h-[16px] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </Link>
